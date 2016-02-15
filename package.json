@@ -1,0 +1,25 @@
+{
+  "name": "es6marionette",
+  "version": "1.0.0",
+  "description": "Creating application with Borwserifi + ES6 + Marionette ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ptretyakov/es6marionette.git"
+  },
+  "keywords": [
+    "es6",
+    "marionette",
+    "backbone",
+    "browserifi"
+  ],
+  "author": "Tretyakov Pavel <tretyakovpavel.ru@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ptretyakov/es6marionette/issues"
+  },
+  "homepage": "https://github.com/ptretyakov/es6marionette#readme"
+}
