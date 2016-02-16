@@ -15,12 +15,12 @@ var scriptsNotify = {
 
 function compile(watch) {
   var bundler = watchify(
-    browserify('./source/app.js',
+    browserify('./source/js/app.js',
       {
         debug: true,
-        paths: ['./node_modules', './source/']
+        paths: ['./node_modules/', './source/js/']
       })
-    .transform(stringify(['.haml']))
+    .transform(stringify(['.hbs' , '.haml']))
     .transform(babel)
     );
 

@@ -8,18 +8,18 @@ var contentNotify = {
 };
 
 gulp.task('images', function(){
-  return gulp.src('./layout/images/**/*.*')
-    .pipe(gulp.dest('./build/images'));
+  return gulp.src('./source/images/**/*.*')
+    .pipe(gulp.dest('./pulic/images'));
 });
 
 gulp.task('fonts', function(){
-  return gulp.src('./layout/fonts/**/*.*')
-    .pipe(gulp.dest('./build/fonts'));
+  return gulp.src('./source/fonts/**/*.*')
+    .pipe(gulp.dest('./pulic/fonts'));
 });
 
 gulp.task('video', function(){
-  return gulp.src('./layout/video/**/*.*')
-    .pipe(gulp.dest('./build/video'));
+  return gulp.src('./source/video/**/*.*')
+    .pipe(gulp.dest('./pulic/video'));
 });
 
 gulp.task('content', ['images', 'fonts', 'video']);
