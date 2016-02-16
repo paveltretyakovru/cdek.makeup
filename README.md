@@ -1,9 +1,9 @@
-# ES6 + Browserify + Backbone.Marionete + Haml + Scss + Gulp
+# ES6 + Browserify + Backbone.Marionette + Haml + Scss + Gulp
 
 Frontend application template.
 This is application have minimal sceleton for create full front application on Backbone.Marrionete with routes.
 
-Also, applicateion compiled Haml , Sass files, and init simple demp server on http://localhost:4444
+Also, applicateion compiled Haml , Sass files, and init simple demo server on http://localhost:4444
 
 Dirs:
   - **source** : source  folder with all application files
@@ -28,9 +28,17 @@ Dirs:
 $ npm install
 ````
 ## Init
+Compile files and watch javascript application
 ````
 $ gulp
 ````
+Compile template application files and watch sass and haml files
+````
+$ gulp layout
+````
+
+**Other tasks** watch in **gulpfile.js** and files on folder **tasks**
+
 After init all source data completed to **public** dir. Here:
   - **bundle.js** completed javascript application (*source/js/app.js*)
   - **index.html** compiled exampled index.haml template (*source/js/haml/index.haml*)
