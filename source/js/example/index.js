@@ -1,8 +1,8 @@
 import { ItemView } 		from 'backbone.marionette';
-import Template 				from 'main/main.hbs';
+import Template 				from 'example/example.hbs';
 import Rivets 					from 'rivets';
 import RivetsBacbkone		from 'rivets-backbone-adapter';
-import Model 						from 'main/main.model';
+import Model 						from 'example/example.model';
 
 export default ItemView.extend({
 	el 				: 'body' ,

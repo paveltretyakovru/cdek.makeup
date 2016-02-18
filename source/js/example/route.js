@@ -1,5 +1,5 @@
 import { Route } 	from 'backbone-routing';
-import View 		from 'main';
+import View 		from 'example';
 
 export default Route.extend({
 
@@ -7,5 +7,5 @@ export default Route.extend({
 		this.view = new View();
 		this.view.render();
 	}
-	
+
 });

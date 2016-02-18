@@ -1,12 +1,12 @@
 import { Router } 	from 'backbone-routing';
-import MainRoute 	from 'main/route';
+import ExampleRoute 	from 'example/route';
 
 export default Router.extend({
 	routes : {
-		''	: 'main'
+		''	: 'example'
 	} ,
 
-	main(){
-		return new MainRoute();
+	example(){
+		return new ExampleRoute();
 	}
 });
