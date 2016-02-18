@@ -1,9 +1,8 @@
-import Backbone 			from 'backbone';
+import Backbone 		from 'backbone';
 import { Router } 		from 'backbone-routing';
 import ExampleRoute 	from 'example/route';
-import BackboneEvents	from 'modules/backbone/route-events';
 
-export default Router.extend({
+let  router = Router.extend({
 	initialize(){
 		console.log('Initialize router');
 	} ,
@@ -26,3 +25,5 @@ export default Router.extend({
 		return new ExampleRoute();
 	}
 });
+
+export default router;

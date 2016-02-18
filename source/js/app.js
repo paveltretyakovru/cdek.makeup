@@ -4,7 +4,6 @@ import $ 			from 'jquery';
 import Application 	from 'application';
 import Router 		from 'router';
 
-let app = new Application();
-app.router = new Router();
+let app 			= new Application({ router : new Router() });
 
 Backbone.history.start();
