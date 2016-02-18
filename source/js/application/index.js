@@ -1,6 +1,6 @@
-import $ 				from 'jquery';
-import _ 				from 'lodash';
-import Radio 			from 'backbone.radio';
+import $ 							from 'jquery';
+import _ 							from 'lodash';
+import Radio 					from 'backbone.radio';
 import {Application}	from 'backbone.marionette';
 
 let routerChannel = Radio.channel('router');
