@@ -1,4 +1,4 @@
-# ES6 + Browserify + Backbone.Marionette + Haml + Scss + Gulp
+# Gulp + ES6 + Browserify + Haml + Scss + Backbone.Marionette + Rivets
 
 Frontend application template.
 This is application have minimal sceleton for create full front application on Backbone.Marrionete with routes.
@@ -11,7 +11,7 @@ Dirs:
     	*	**app.js** 		: main, init file. Here starting application and all includes
     	*	**router.js** 	: main system router with all routes. Required to app.js too
     	*	**application** : configure module for marionette
-    	*	**main** 		: example route/view/template module for main page (''-route)
+    	*	**example** 		: example route/view/template module for main page (''-route)
     + **haml** 				: folder with haml templates
     	* **index.haml**	: exampled index.html template
     + **sass** 				: folder with sass,scss stylesheet files
