@@ -9,11 +9,11 @@ export default Router.extend({
 	} ,
 
 	before(){
-
+		// Method action before routing
 	} ,
 
 	after(){
-
+		// Method action after routing
 	} ,
 
 	routes : {
