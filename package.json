@@ -47,6 +47,8 @@
     "gulp-connect": "^2.3.1",
     "gulp-rename": "^1.2.2",
     "gulp-ruby-haml": "0.0.9",
+    "rivets": "^0.8.1",
+    "rivets-backbone-adapter": "^2.2.0",
     "stringify": "^4.0.1"
   }
 }
