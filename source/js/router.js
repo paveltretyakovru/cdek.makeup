@@ -1,29 +1,57 @@
-import Backbone 		from 'backbone';
-import { Router } 		from 'backbone-routing';
-import ExampleRoute 	from 'example/route';
+'use strict';
+import _ from 'lodash';
+import Backbone from 'backbone';
+import { Router } from 'backbone-routing';
+import ExampleRoute from 'example/route';
 
-let  router = Router.extend({
-	initialize(){
-		console.log('Initialize router');
-	} ,
+/**
+ * @member (Marionette.Region)  contentRegion регион для основного контента
+ * @member (Marionette.Region)  menuRegion регион для меню
+ * @author Tretyakov Pavel <tretyakovpavel.ru@gmail.com>
+ */
+let  router = Router.extend( {
 
-	before(){
-		// Method action before routing
-	} ,
+  /**
+   * @member routes Объект для
+   * @return (object) Возвращает объект с маршрутами
+   */
+  routes: {
+    '': 'example' ,
+  },
 
-	after(){
-		// Method action after routing
-	} ,
+  /**
+   * @method initialize Метод для инициализиации главного роутера приложения
+   * @param (mixed) options
+   * @return (mixed) Инициализирует основные регионы приложения
+   */
+  initialize(options) {
+    this._initialData = options.initialData || {};
+    this._contentRegion = options.contentRegion || {};
 
-	routes : {
-		''	: 'example' ,
-		'test' : 'test' ,
-		'test1': 'test1' ,
-	} ,
+    this.listenTo( this , 'before:enter' , this.onBeforeEnterRoute );
+    this.listenTo( this , 'enter' , this.onEnterRoute );
+    this.listenTo( this , 'error' , this.onErrorRoute );
+  } ,
 
-	example(){
-		return new ExampleRoute();
-	}
+  onBeforeEnterRoute() {
+    return this;
+  },
+  onEnterRoute() {
+    return this;
+  },
+  onErrorRoute(){
+    console.error('Error router');
+    return this;
+  },
+
+  /**
+   * @method example
+   * @return (mixed) Инициализирует марщут для example
+   */
+  example() {
+    return new ExampleRoute({ contentRegion : this._contentRegion });
+  },
+
 });
 
 export default router;

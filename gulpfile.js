@@ -7,6 +7,6 @@ require('./tasks/styles');
 require('./tasks/server-html');
 
 gulp.task('build'	, ['html', 'content', 'sass', 'scripts']);
-gulp.task('dev'		, ['html', 'content', 'watch', 'connect']);
+gulp.task('dev'		, ['html', 'content', 'watch', 'configs:copy', 'configs:watch' , 'connect']);
 gulp.task('layout'	, ['layout:connect', 'layout:sass', 'layout:haml', 'layout:watch']);
 gulp.task('default'	, ['dev']);

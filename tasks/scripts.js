@@ -13,6 +13,12 @@ var scriptsNotify = {
   onLast: true
 };
 
+var configsNotify = {
+  title: 'Configs',
+  message: 'Done!',
+  onLast: true
+};
+
 function compile(watch) {
   var bundler = watchify(
     browserify('./source/js/app.js',
@@ -48,6 +54,17 @@ function compile(watch) {
 function watch() {
   return compile(true);
 };
+
+gulp.task('configs:copy', function(){
+  return gulp.src('./source/js/modules/.config.js')
+    .pipe($.rename('config.js'))
+    .pipe(gulp.dest('./source/js/modules/'))
+    .pipe($.notify(configsNotify));
+});
+
+gulp.task('configs:watch', function() {
+  gulp.watch(['./source/js/modules/.config.js'], ['configs:copy']);
+});
 
 gulp.task('scripts', function() { return compile(); });
 gulp.task('watch', function() { return watch(); });
