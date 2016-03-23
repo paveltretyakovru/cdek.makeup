@@ -1,0 +1,42 @@
+section#first-page {
+  display: flex;
+  flex-direction: column;
+  background: url(../images/first_page_bg.jpg);
+  height: 100%;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+
+    height: 154px;
+    background-color: #fff;
+
+    .button {
+      padding: 16px 12px;
+      color: #fff;
+      border: 1px solid #fff;
+    }
+
+    // Левая часть заголовка первой страницы
+    aside:first-child {
+      padding-top: 35px;
+      padding-left: 60px;
+    }
+
+    nav {
+      padding-top: 48px;
+
+      ul {
+        display: flex;
+
+        li {
+          padding: 12px;
+        }
+      }
+    }
+
+    aside:last-child {
+      background: url(../images/first_page_bg.jpg);
+    }
+  }
+}

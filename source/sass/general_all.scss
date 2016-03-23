@@ -1,3 +1,10 @@
-body{
-	background-color: #fff;
-}
+// ============== PLUGINS ==========
+@import "compass/reset";
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300&subset=latin,cyrillic);
+// =================================
+
+@import "tags.scss";
+
+// ============== PAGES ==========
+@import "first-page.scss";
+// ===============================

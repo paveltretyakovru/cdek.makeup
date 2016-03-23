@@ -3,12 +3,32 @@
 		%meta{ :"http-equiv" => "content-type" , :content =>"text/html; charset=utf-8" }
 		%link{ :href=>'css/general_all.css' , :type=>'text/css' , :rel=>'stylesheet' }
 	%body
-		Example haml file
 
 		%main
-			%aside#menu-region
-				Menu region
-			%section#content-region
-				Content region
+			%section#first-page
+				%header
+					%aside
+						%img{ :src=>'images/logo.jpg'}
+					%nav
+						%ul
+							%li
+								%a{ :href=>'#' } Главная
+							%li
+								%a{ :href=>'#' } Почему мы
+							%li
+								%a{ :href=>'#' } Отделения
+							%li
+								%a{ :href=>'#' } Отзывы
+							%li
+								%a{ :href=>'#' } Новости
+					%aside
+						%article
+							%a.button Регистрация
+							%a.button Вход
+						%article
+							.select-wrapper
+								%select
+									%option Санкт-Петербург
+									%option Москва
 
-		%script{ :type=>'text/javascript' , :src=>'bundle.js' }
+		-# %script{ :type=>'text/javascript' , :src=>'bundle.js' }

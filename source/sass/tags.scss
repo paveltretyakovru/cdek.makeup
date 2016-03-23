@@ -1,0 +1,26 @@
+body {
+	font-family: 'Roboto' , sans-serif;
+	background-color: #fff;
+}
+
+a{
+	color: #505050;
+	text-decoration: none;
+}
+
+.select-wrapper {
+  overflow: hidden;
+  background: url(../images/select-arrow.jpg) no-repeat right #eeeeee;
+  width: 154px;
+
+	select {
+		border-radius: 0;
+		background: transparent;
+		padding: 5px;
+		border: 0;
+		font-size: 9pt;
+		line-height: 1;
+		-webkit-appearance: none;
+		width: 154px;
+	}
+}

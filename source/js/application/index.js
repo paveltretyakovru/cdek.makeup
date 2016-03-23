@@ -25,7 +25,6 @@ class application extends Application{
 
   regions(){
     return {
-      menuRegion: '#menu-region',
       contentRegion: '#content-region',
     }
   }
@@ -36,7 +35,6 @@ class application extends Application{
    */
   onStart(){
     Backbone.history.start();
-    this.menuRegion.show(new MenuView());
     return this;
   }
 

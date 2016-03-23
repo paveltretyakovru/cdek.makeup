@@ -1,6 +1,10 @@
-/node_modules/
-/public/*
-!/public/images/*
-/.sass-cache/
-/css/
-/source/js/modules/config.js
+!public/
+
+public/*
+!public/images/
+
+
+node_modules/
+.sass-cache/
+css/
+source/js/modules/config.js
