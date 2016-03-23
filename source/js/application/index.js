@@ -12,7 +12,7 @@ class application extends Application{
 
     // Загрузка первоначальных данных
     this.loadInitialData().then(
-      
+
       // Загрузка данных прошла успешно
       (data) => this.onLoadInitialDataSuccess(data),
 
@@ -68,6 +68,7 @@ class application extends Application{
    */
   loadInitialData(){
     return new Promise((resolve, reject) =>{
+      return resolve({empty:'data'});
       return $.get(apihost).then(
         (data) => resolve(data),
         (error) => reject(error)
