@@ -37,6 +37,22 @@ section#first-page {
 
     aside:last-child {
       background: url(../images/first_page_bg.jpg);
+
+      // Блок с входом и регистрацией
+      article:first-child {
+        display: flex;
+        padding: 24px;
+
+        .button {
+          min-width: 100px;
+          text-align: center;
+          margin-left: 8px;
+          a {
+            color: #fff;
+          }
+        }
+      }
+
     }
   }
 }
