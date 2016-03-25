@@ -32,13 +32,32 @@
 					.button
 						%a Вход
 				%article
-					.styled-select.slate
-						%select
-							%option Санкт-Петербург
-							%option Москва
+					%p Ваш город
+					.line
+						.line-icon
+							%img{ :src => 'images/ico-header-location.png' }
+						.styled-select.slate
+							%select
+								%option Санкт-Петербург
+								%option Москва
+					.line
+						.line-icon
+							%img{ :src => 'images/ico-header-search.png' }
+						%input{ :type => 'text', :placeholder => 'Введите трек номер' }
 
 		%main
 			%section#first-page
 
+				%article.slider
+					.title
+						%h1 Перевод наложенного
+						%h1
+							платежа на
+							%strong 3-ий день!
+					.caption
+						Обьединение отделений компании СДЭК предоставляет особые условия для Интернет-магазинов, поступления накапливаются с Понедельника по Пятницу и отправляются каждый Понедельник!
+
+				%article.language
+					rus
 
 		-# %script{ :type=>'text/javascript' , :src=>'bundle.js' }

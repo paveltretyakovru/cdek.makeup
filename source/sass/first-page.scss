@@ -1,8 +1,47 @@
 section#first-page {
-  display: flex;
-  flex-direction: column;
-  // background: url(../images/first_page_bg.jpg);
-  background: url(../images/bg-first-page-earth.png) left 54px no-repeat, url(../images/first_page_bg1.jpg) repeat;
-  background-size: auto;
+  color: #fff;
   height: 100%;
+  display: flex;
+  background: url(../images/bg-first-page-earth.png) left 70% no-repeat, url(../images/first_page_bg1.jpg) repeat;
+  flex-direction: column;
+  background-size: auto;
+  justify-content: center;
+
+  article.slider {
+
+    .title {
+      text-align: center;
+
+      h1 {
+        font-size: 40px;
+        font-weight: 100;
+        line-height: 1.3;
+        letter-spacing: 4px;
+
+        strong {
+          font-weight: 400;
+        }
+      }
+
+      & > h1:last-child {
+        margin-left: 240px;
+      }
+
+    } // article.slider .title
+
+    .caption {
+      width: 65%;
+      margin: auto;
+      text-align: center;
+      margin-top: 40px;
+      font-weight: 100;
+      line-height: 1.3;
+    }
+
+  } // article.slider
+
+  article.language {
+    background: #317a1d;
+  }
+
 }
