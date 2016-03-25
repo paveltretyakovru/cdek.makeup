@@ -8,19 +8,30 @@ a{
 	text-decoration: none;
 }
 
-.select-wrapper {
-  overflow: hidden;
-  background: url(../images/select-arrow.jpg) no-repeat right #eeeeee;
-  width: 154px;
+.styled-select {
+   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0 #fff;
+	 background-size: contain;
+	 height: 19px;
+   overflow: hidden;
+   width: 240px;
+}
 
-	select {
-		border-radius: 0;
-		background: transparent;
-		padding: 5px;
-		border: 0;
-		font-size: 9pt;
-		line-height: 1;
-		-webkit-appearance: none;
-		width: 154px;
-	}
+.styled-select select {
+   background: transparent;
+   border: none;
+   font-size: 14px;
+   height: 20px;
+  //  padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   width: 268px;
+}
+
+.styled-select.slate {
+   background: url(../images/select-arrow.png) no-repeat right center #fff;
+   width: 240px;
+}
+
+.styled-select.slate select {
+  //  border: 1px solid #ccc;
+   font-size: 12px;
+   width: 268px;
 }

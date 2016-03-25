@@ -1,58 +1,8 @@
 section#first-page {
   display: flex;
   flex-direction: column;
-  background: url(../images/first_page_bg.jpg);
+  // background: url(../images/first_page_bg.jpg);
+  background: url(../images/bg-first-page-earth.png) left 54px no-repeat, url(../images/first_page_bg1.jpg) repeat;
+  background-size: auto;
   height: 100%;
-
-  header {
-    display: flex;
-    justify-content: space-between;
-
-    height: 154px;
-    background-color: #fff;
-
-    .button {
-      padding: 16px 12px;
-      color: #fff;
-      border: 1px solid #fff;
-    }
-
-    // Левая часть заголовка первой страницы
-    aside:first-child {
-      padding-top: 35px;
-      padding-left: 60px;
-    }
-
-    nav {
-      padding-top: 48px;
-
-      ul {
-        display: flex;
-
-        li {
-          padding: 12px;
-        }
-      }
-    }
-
-    aside:last-child {
-      background: url(../images/first_page_bg.jpg);
-
-      // Блок с входом и регистрацией
-      article:first-child {
-        display: flex;
-        padding: 12px 56px 12px 18px;
-
-        .button {
-          min-width: 100px;
-          text-align: center;
-          margin-left: 8px;
-          a {
-            color: #fff;
-          }
-        }
-      }
-
-    }
-  }
 }
