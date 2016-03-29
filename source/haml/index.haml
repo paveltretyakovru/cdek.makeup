@@ -1,52 +1,53 @@
 %html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en"}
 	%head
 		%meta{ :"http-equiv" => "content-type" , :content =>"text/html; charset=utf-8" }
+		%link{ :href => 'components\components-font-awesome\css\font-awesome.min.css'}
 		%link{ :href=>'css/general_all.css' , :type=>'text/css' , :rel=>'stylesheet' }
 	%body
 
-		%header
-			%aside
-				%img{ :src=>'images/logo.jpg'}
-			%nav
-				%ul
-					%li
-						%a{ :href=>'#' } Главная
-					%li
-						%a{ :href=>'#' } Почему мы
-					%li
-						%a{ :href=>'#' } Отделения
-					%li
-						%a{ :href=>'#' } Отзывы
-					%li
-						%a{ :href=>'#' } Новости
-				%article
-					%img{ :src => 'images/ico-header-phone.png' }
-					%span 8 800 337 80 91
-
-			.tringle
-				%img{ :src => 'images/header-tringel.png' }
-			%aside
-				%article
-					.button
-						%a Регистрация
-					.button
-						%a Вход
-				%article
-					%p Ваш город
-					.line
-						.line-icon
-							%img{ :src => 'images/ico-header-location.png' }
-						.styled-select.slate
-							%select
-								%option Санкт-Петербург
-								%option Москва
-					.line
-						.line-icon
-							%img{ :src => 'images/ico-header-search.png' }
-						%input{ :type => 'text', :placeholder => 'Введите трек номер' }
-
 		%main
+
 			%section#first-page
+				%header
+					%aside
+						%img{ :src=>'images/logo.jpg'}
+					%nav
+						%ul
+							%li
+								%a{ :href=>'#' } Главная
+							%li
+								%a{ :href=>'#' } Почему мы
+							%li
+								%a{ :href=>'#' } Отделения
+							%li
+								%a{ :href=>'#' } Отзывы
+							%li
+								%a{ :href=>'#' } Новости
+						%article
+							%img{ :src => 'images/ico-header-phone.png' }
+							%span 8 800 337 80 91
+
+					.tringle
+						%img{ :src => 'images/header-tringel.png' }
+					%aside
+						%article
+							.button
+								%a Регистрация
+							.button
+								%a Вход
+						%article
+							%p Ваш город
+							.line
+								.line-icon
+									%img{ :src => 'images/ico-header-location.png' }
+								.styled-select.slate
+									%select
+										%option Санкт-Петербург
+										%option Москва
+							.line
+								.line-icon
+									%img{ :src => 'images/ico-header-search.png' }
+								%input{ :type => 'text', :placeholder => 'Введите трек номер' }
 
 				%article.slider
 					.title
@@ -58,6 +59,54 @@
 						Обьединение отделений компании СДЭК предоставляет особые условия для Интернет-магазинов, поступления накапливаются с Понедельника по Пятницу и отправляются каждый Понедельник!
 
 				%article.language
-					rus
+					%a.active{ :href=>'#' } Rus
+					%a{ :href=>'#' } Eng
+					%a{ :href=>'#' } Chn
+
+			%section#advantages
+				%figure
+					%p
+						%img{ :src => 'images/ico-settings.png' }
+					%figcaption
+						%strong 16 лет
+						успешной работы на мировом рынке
+
+				%figure
+					%p
+						%img{ :src => 'images/ico-globus.png' }
+					%figcaption
+						%strong 300 пунктов
+						выдачи - отправки посылок
+
+				%figure
+					%p
+						%img{ :src => 'images/ico-location.png' }
+					%figcaption
+						%strong 14 дней
+						бесплатного хранения посылок на нашем складе
+
+				%figure
+					%p
+						%img{ :src => 'images/ico-home.png' }
+					%figcaption
+						%strong API
+						бесплатная интеграция вашего магазина
+
+			%section#second-page
+				%h1 Почему это выгодно для Вас
+
+				%span.fa-stack.fa-lg
+					%i.fa.fa-circle.fa-stack-2x
+					%i.fa.fa-
+
+				%ul
+					%li
+						%span.fa-stack.fa-lg
+							%i.fa.fa-circle.fa-stack-2x
+							%i.fa.fa-phone.fa-stack-1x.fa-inverse
+						%span
+							Перевод наложенного платежа в 9:00 утра
+						%span
+							Подробнее
 
 		-# %script{ :type=>'text/javascript' , :src=>'bundle.js' }
