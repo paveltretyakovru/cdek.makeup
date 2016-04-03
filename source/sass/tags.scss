@@ -36,6 +36,21 @@ a{
    width: 172px;
 }
 
+.styled-select.blue {
+	height: 32px;
+   background: url(../images/select-arrow-blue.png) no-repeat right center #fff;
+  //  width: 156px;
+}
+
+.styled-select.blue select {
+	font-size: 16px;
+	height: 32px;
+	border-radius: 4px;
+	box-shadow: inset 0px 0px 7px 0px rgba(68,68,68,0.4);
+	-webkit-box-shadow: inset 0px 0px 7px 0px rgba(68,68,68,0.4);
+	-moz-box-shadow: inset 0px 0px 7px 0px rgba(68,68,68,0.4);
+}
+
 main {
 	min-width: 1100px;
 }

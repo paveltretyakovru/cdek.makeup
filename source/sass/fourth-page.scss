@@ -1,0 +1,73 @@
+#fourth-page {
+  display: flex;
+  justify-content: space-between;
+  background: url('../images/bg-fourth-page.png') top right no-repeat;
+
+  aside {
+    // border: 1px solid red;
+    padding: 16px 64px;
+    width: 521px;
+
+    article.post-weight {
+      display: flex;
+
+      img {
+        margin-right: 8px;
+      }
+    }
+
+    fieldset.town {
+      background: url('../images/bg-fourth-page-town.png') bottom center no-repeat;
+      background-size: contain;
+    }
+
+    fieldset.worker {
+      background: url('../images/bg-fourth-page-worker.png') top right no-repeat;
+    }
+
+    fieldset {
+      min-height: 121px;
+      margin-bottom: 40px;
+
+      .fieldset-title {
+        margin-bottom: 40px;
+
+        & > span {
+          font-size: 24px;
+        }
+      }
+
+      .fieldset-form {
+        display: flex;
+        justify-content: space-between;
+
+        .fieldset-input:first-child {
+          margin-right: 12px;
+        }
+
+        .fieldset-input {
+          min-width: 208px;
+
+          .styled-select.blue {
+            width: 208px;
+          }
+
+          p {
+            margin-bottom: 8px;
+          }
+
+          input {
+            width: 100%;
+            border: none;
+            padding: 8px;
+            border-radius: 4px;
+            box-shadow: inset 0px 0px 7px 0px rgba(68,68,68,0.4);
+            -webkit-box-shadow: inset 0px 0px 7px 0px rgba(68,68,68,0.4);
+            -moz-box-shadow: inset 0px 0px 7px 0px rgba(68,68,68,0.4);
+          }
+        }
+      }
+
+    }
+  }
+}

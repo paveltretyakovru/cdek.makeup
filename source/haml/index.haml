@@ -92,10 +92,10 @@
 						%strong API
 						бесплатная интеграция вашего магазина
 
-			%section#second-page
+			%section#second-page.info-page
 				%h1 Почему это выгодно для Вас
 
-				%ul
+				%ul.whylist
 					%li
 						%span.fa-stack.fa-lg
 							%i.fa.fa-circle.fa-stack-2x
@@ -126,7 +126,8 @@
 							%i.fa.fa-mobile.fa-stack-1x.fa-inverse
 						.desc-wrapper
 							.desc
-								СМС-оповещения с номером курьера
+								%strong СМС-
+								оповещения с номером курьера
 						.more-wrapper
 							%span.more
 								Подробнее
@@ -144,28 +145,149 @@
 								Подробнее
 								%span.arrow >
 
-				#add-services-wrapper
-					Дополнительные услуги
+				.add-services-wrapper
 					%div
-						%span#add-services
-							%span.fa-stack.fa-lg
-								%i.fa.fa-circle.fa-stack-2x
-								%i.fa.fa-exclamation.fa-stack-1x.fa-inverse
+						Дополнительные услуги
 
-							%span.fa-stack.fa-lg
-								%i.fa.fa-circle.fa-stack-2x
-								%i.fa.fa-sign-out.fa-stack-1x.fa-inverse
+					%div
+						%span.add-services
+							%span.fa-stack
+								-# %i.fa.fa-circle.fa-stack-2x
+								%i.fa.fa-exclamation.fa-stack-1x
 
-							%span.fa-stack.fa-lg
-								%i.fa.fa-circle.fa-stack-2x
-								%i.fa.fa-car.fa-stack-1x.fa-inverse
+							%span.fa-stack
+								-# %i.fa.fa-circle.fa-stack-2x
+								%i.fa.fa-sign-out.fa-stack-1x
 
-							%span.fa-stack.fa-lg
-								%i.fa.fa-circle.fa-stack-2x
-								%i.fa.fa-line-chart.fa-stack-1x.fa-inverse
+							%span.fa-stack
+								-# %i.fa.fa-circle.fa-stack-2x
+								%i.fa.fa-car.fa-stack-1x
 
-			%section#third-page
+							%span.fa-stack
+								-# %i.fa.fa-circle.fa-stack-2x
+								%i.fa.fa-line-chart.fa-stack-1x
+
+			%section.section-page-title
 				%h1 Почему это выгодно для Ваших клиентов
+
+			%section#third-page.info-page
+				%ul.whylist
+					%li
+						%span.fa-stack.fa-lg
+							%i.fa.fa-circle.fa-stack-2x
+							%i.fa.fa-phone.fa-stack-1x.fa-inverse
+						.desc-wrapper
+							.desc
+								Бесплатный прозвон клиентов перед доставкой
+						.more-wrapper
+							%span.more
+								Подробнее
+								%span.arrow >
+
+					%li
+						%span.fa-stack.fa-lg
+							%i.fa.fa-circle.fa-stack-2x
+							%i.fa.fa-gift.fa-stack-1x.fa-inverse
+						.desc-wrapper
+							.desc
+								Бесплатная фирменная упаковка и маркировка посылки
+						.more-wrapper
+							%span.more
+								Подробнее
+								%span.arrow >
+
+					%li
+						%span.fa-stack.fa-lg
+							%i.fa.fa-circle.fa-stack-2x
+							%i.fa.fa-mobile.fa-stack-1x.fa-inverse
+						.desc-wrapper
+							.desc
+								СМС- оповещение с номером курьера
+						.more-wrapper
+							%span.more
+								Подробнее
+								%span.arrow >
+
+					%li
+						%span.fa-stack.fa-lg
+							%i.fa.fa-circle.fa-stack-2x
+							%i.fa.fa-money.fa-stack-1x.fa-inverse
+						.desc-wrapper
+							.desc
+								СМС- оповещение с номером курьера
+						.more-wrapper
+							%span.more
+								Подробнее
+								%span.arrow >
+
+				.add-services-wrapper
+					%div
+						Дополнительные услуги
+
+					%div
+						%span.add-services
+							%span.fa-stack
+								-# %i.fa.fa-circle.fa-stack-2x
+								%i.fa.fa-exclamation.fa-stack-1x
+
+							%span.fa-stack
+								-# %i.fa.fa-circle.fa-stack-2x
+								%i.fa.fa-sign-out.fa-stack-1x
+
+							%span.fa-stack
+								-# %i.fa.fa-circle.fa-stack-2x
+								%i.fa.fa-car.fa-stack-1x
+
+							%span.fa-stack
+								-# %i.fa.fa-circle.fa-stack-2x
+								%i.fa.fa-line-chart.fa-stack-1x
+
+			%section.section-page-title
+				%h1 Калькулятор расчета
+
+			%section#fourth-page.info-page
+
+				%aside
+					%fieldset.town
+						.fieldset-title
+							%i.fa.fa-building-o.fa-2x
+							%span Город
+
+						.fieldset-form
+							.fieldset-input
+								%p Откуда
+								%input
+
+							.fieldset-input
+								%p Куда
+								%input
+
+					%fieldset.worker
+						.fieldset-title
+							%i.fa.fa-map-marker.fa-2x
+							%span Место доставки
+
+						.fieldset-form
+							.fieldset-input
+								%p Откуда
+								.styled-select.blue
+									%select
+										%option Санкт-Петербург
+										%option Москва
+
+							.fieldset-input
+								%p Куда
+								.styled-select.blue
+									%select
+										%option Санкт-Петербург
+										%option Москва
+
+					%article.post-weight
+						%img{ :src => 'images/ico-fourth-page-box.png' }
+						%span Вес посылки: 5кг
+
+				%aside
+					right
 
 
 		-# %script{ :type=>'text/javascript' , :src=>'bundle.js' }
