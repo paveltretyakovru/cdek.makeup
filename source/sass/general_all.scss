@@ -1,5 +1,6 @@
 // ============== PLUGINS ==========
 @import "compass/reset";
+@import "compass/css3";
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300&subset=latin,cyrillic);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
 // =================================
@@ -13,4 +14,8 @@
 @import "second-page.scss";
 @import "third-page.scss";
 @import "fourth-page.scss";
+@import "fifth-page.scss";
+@import "sixth-page.scss";
+@import "eighth-page.scss";
+@import "footer.scss";
 // ===============================

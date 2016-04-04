@@ -1,0 +1,30 @@
+#fifth-page {
+  background: url('../images/bg-fifth-page.png');
+  height: 346px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+
+  h1 {
+    font-size: 34px;
+  }
+
+  p {
+    font-size: 24px;
+    font-family: 'Roboto Light';
+    margin-top: 18px;
+  }
+
+  button {
+    color: #fff;
+    padding: 12px 45px;
+    border: none;
+    background-color: #448aff;
+    font-size: 24px;
+    font-weight: 300;
+    border-radius: 4px;
+    margin-top: 32px;
+  }
+}

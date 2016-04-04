@@ -246,48 +246,140 @@
 				%h1 Калькулятор расчета
 
 			%section#fourth-page.info-page
+				.sides
+					%aside.fourth-page-aside-left
+						%fieldset.town
+							.fieldset-title
+								%i.fa.fa-building-o.fa-2x
+								%span Город
+
+							.fieldset-form
+								.fieldset-input
+									%p Откуда
+									%input
+
+								.fieldset-input
+									%p Куда
+									%input
+
+						%fieldset.worker
+							.fieldset-title
+								%i.fa.fa-map-marker.fa-2x
+								%span Место доставки
+
+							.fieldset-form
+								.fieldset-input
+									%p Откуда
+									.styled-select.blue
+										%select
+											%option Санкт-Петербург
+											%option Москва
+
+								.fieldset-input
+									%p Куда
+									.styled-select.blue
+										%select
+											%option Санкт-Петербург
+											%option Москва
+
+						%article.post-weight
+							%img{ :src => 'images/ico-fourth-page-box.png' }
+							%span Вес посылки: 5кг
+
+					%aside.fourth-page-aside-right
+						.radios
+							%aside
+								.style-radio
+									%input#radio01{ :type => 'radio' , :name => "radio" }
+									%label{ :for => "radio01"}
+										%span
+										%p Дополнительная упаковка
+							%aside
+								.style-radio
+									%input#radio02{ :type => 'radio' , :name => "radio" }
+									%label{ :for => "radio02"}
+										%span
+										%p Дополнительная опция
+
+						.calc-result
+							%strong Итого:
+							%span 250 рублей
+
+				.ranger
+					.style-range
+						%input{ :type => 'range' , :value => '13' , :min => '1' , :max => '28'}
+
+			%section#fifth-page
+				%h1 Остались вопросы?
+				%p Получите бесплатную консультацию
+				%button Получить
+
+			%section.section-page-title
+				%h1 Наши пункты выдачи
+				%p Более 306 пунктов выдачи по всей России
+
+			%section#sixth-page
+				#sixth-page-overlay
+				-# #cdek_map
+				%iframe{ :src=>"https://www.google.com/maps/d/embed?mid=zyyKoXrs15N0.kmgWNIl6rS_g", :width=>"100%", :height=>"480"}
+
+			%section.section-page-title
+				%h1 Отзывы
+				%p С нами работают крупные компании
+
+			%section#eighth-page.info-page
+
+				%article
+					.message-box
+						.dialogbox
+							.body
+								.message
+									%strong Lorem ipsum dolor sit amet
+									%br
+									%span Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								%span.tip.tip-down
+					%img{ :src => 'images/virgin-logo.png' }
+
+				%article
+					.message-box
+						.dialogbox
+							.body
+								.message
+									%strong Lorem ipsum dolor sit amet
+									%br
+									%span Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								%span.tip.tip-down
+					%img{ :src => 'images/lg-logo.png' }
+
+				%article
+					.message-box
+						.dialogbox
+							.body
+								.message
+									%strong Lorem ipsum dolor sit amet
+									%br
+									%span Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								%span.tip.tip-down
+					%img{ :src => 'images/via-logo.png' }
+
+			%footer
 
 				%aside
-					%fieldset.town
-						.fieldset-title
-							%i.fa.fa-building-o.fa-2x
-							%span Город
+					%h1 Мы работаем для вас!
+					%p Задайте интересующие вас вопросы в форме обратной связи и специалисты свяжутся с вами в ближайшее время
 
-						.fieldset-form
-							.fieldset-input
-								%p Откуда
-								%input
-
-							.fieldset-input
-								%p Куда
-								%input
-
-					%fieldset.worker
-						.fieldset-title
-							%i.fa.fa-map-marker.fa-2x
-							%span Место доставки
-
-						.fieldset-form
-							.fieldset-input
-								%p Откуда
-								.styled-select.blue
-									%select
-										%option Санкт-Петербург
-										%option Москва
-
-							.fieldset-input
-								%p Куда
-								.styled-select.blue
-									%select
-										%option Санкт-Петербург
-										%option Москва
-
-					%article.post-weight
-						%img{ :src => 'images/ico-fourth-page-box.png' }
-						%span Вес посылки: 5кг
+					%fieldset
+						%p Подписаться на новости
+						%input{ :type => 'text', :placeholder => 'Введите Email', :type => 'email' }
 
 				%aside
-					right
+					%h1 8 800 250 5 250
+					%p Санкт Петербург, пл.Ленина БЦ Большой офис 777
 
+					#social-icons
+						%img{ :src => 'images/facebook-logo.png' }
+						%img{ :src => 'images/twitter-logo.png' }
+						%img{ :src => 'images/vk-logo.png' }
 
-		-# %script{ :type=>'text/javascript' , :src=>'bundle.js' }
+		%script{ :src => 'https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js' }
+		%script{ :type=>'text/javascript' , :src=>'bundle.js' }

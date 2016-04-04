@@ -1,0 +1,23 @@
+section#eighth-page {
+  display: flex;
+
+
+  & > * {
+    width: 340px;
+    text-align: center;
+
+    .message {
+      text-align: left;
+      padding: 24px;
+
+      strong {
+        font-weight: 600;
+      }
+
+    }
+
+    img {
+      margin-top: 32px;
+    }
+  }
+}
