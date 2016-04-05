@@ -1,10 +1,16 @@
 section#second-page {
+  display: flex;
+  justify-content: center;
 
   h1 {
     text-align: center;
     color: #444444;
     font-size: 45px;
     margin-bottom: 92px;
+  }
+
+  .content {
+    width: 1200px;
   }
 
 }

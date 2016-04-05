@@ -1,5 +1,6 @@
 #fifth-page {
-  background: url('../images/bg-fifth-page.png');
+  background: url('../images/bg-fifth-page.png') no-repeat;
+  background-size: cover;
   height: 346px;
   display: flex;
   flex-direction: column;

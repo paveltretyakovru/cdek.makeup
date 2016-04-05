@@ -1,5 +1,8 @@
 #fourth-page {
   background: url('../images/bg-fourth-page.png') top right no-repeat;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 
   .ranger {
     padding-top: 40px;
@@ -86,11 +89,13 @@
         display: flex;
 
         aside {
-          // display: flex;
-
           input[type=radio] {
             background: red;
           }
+        }
+
+        aside:last-child {
+          margin-left: 24px;
         }
       }
 

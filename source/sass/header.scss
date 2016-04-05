@@ -45,6 +45,7 @@ header {
       padding-bottom: 16px;
       font-size: 24px;
       display: flex;
+      color: #242424;
 
       // Phone ico
       img {
@@ -59,9 +60,9 @@ header {
   }
 
   div.tringle {
-    width: 60px;
+    // width: 60px;
     background: url(../images/header-tringel.png) no-repeat, url(../images/first_page_bg1.jpg);
-    margin-left: auto;
+    // margin-left: auto;
     img {
       height: 100%;
       float: right;

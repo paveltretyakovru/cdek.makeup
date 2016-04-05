@@ -1,23 +1,30 @@
 section#eighth-page {
   display: flex;
+  justify-content: center;
 
+  .content {
+    min-width: 1200px;
+    display: flex;
+    justify-content: center;
 
-  & > * {
-    width: 340px;
-    text-align: center;
+    & > * {
+      width: 33%;
+      text-align: center;
 
-    .message {
-      text-align: left;
-      padding: 24px;
+      .message {
+        text-align: left;
+        padding: 24px;
 
-      strong {
-        font-weight: 600;
+        strong {
+          font-weight: 600;
+        }
+
       }
 
-    }
-
-    img {
-      margin-top: 32px;
+      img {
+        margin-top: 32px;
+      }
     }
   }
+
 }

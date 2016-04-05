@@ -14,6 +14,7 @@ section#first-page {
   justify-content: space-between;
 
   article.slider {
+    margin-top: auto;
 
     .title {
       text-align: center;
@@ -47,6 +48,7 @@ section#first-page {
   } // article.slider
 
   article.language {
+    margin-top: auto;
     padding: 4px;
     height: 24px;
     background: #317a1d;
@@ -69,7 +71,7 @@ section#first-page {
 
 }
 
-section#advantages {
+#advantages {
     color: #fff;
     padding: 32px;
     display: flex;
