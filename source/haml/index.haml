@@ -28,10 +28,12 @@
 							%li
 								%a{ :href=>'#' } Отзывы
 							%li
-								%a{ :href=>'#' } Новости
+								%a{ :href=>'#', :class => 'js-show-vk-news' } Новости
 						%article
 							%img{ :src => 'images/ico-header-phone.png' }
 							%span 8 800 337 80 91
+
+
 
 					.tringle
 						%img{ :src => 'images/header-tringel.png' }
@@ -359,9 +361,9 @@
 			%section#sixth-page
 				#sixth-page-overlay
 				-# #cdek_map
-				-# %iframe{ :src=>"https://www.google.com/maps/d/embed?mid=zyyKoXrs15N0.kmgWNIl6rS_g", :width=>"100%", :height=>"480"}
+				%iframe{ :src=>"https://www.google.com/maps/d/embed?mid=zyyKoXrs15N0.k-hQNcaBe3MM", :width=>"100%", :height=>"480"}
 				-# %iframe{ :src => "https://ru.batchgeo.com/map/5d06b4c1024195f1d6197324bac66732", :width => "100%", :height => "480" }
-				%iframe{ :src => "https://mapalist.com/map/582448", :width => "100%", :height => "480", :xml => { :lang => "ru"} }
+				-# %iframe{ :src => "https://mapalist.com/map/582448", :width => "100%", :height => "480", :xml => { :lang => "ru"} }
 
 			%section.section-page-title
 				%h1 Отзывы
