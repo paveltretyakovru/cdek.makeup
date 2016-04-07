@@ -1,6 +1,6 @@
 section#eighth-page {
-  display: flex;
-  justify-content: center;
+  // display: flex;
+  // justify-content: center;
 
   .content {
     min-width: 1200px;
@@ -27,4 +27,11 @@ section#eighth-page {
     }
   }
 
+  .unslider-nav ol li {
+    background-color: #15773D;
+  }
+
+  .unslider-nav ol li.unslider-active{
+    background-color: #339950;
+  }
 }

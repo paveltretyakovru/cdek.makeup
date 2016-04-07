@@ -43,12 +43,56 @@
   "dependencies": {
     "backbone-routing": "^0.2.0",
     "backbone.marionette": "^2.4.4",
+    "bootstrap": "^3.3.6",
+    "bootstrap-browserify": "^2.1.1",
+    "browserify-shim": "^3.8.12",
     "gulp-compass": "^2.1.0",
     "gulp-connect": "^2.3.1",
     "gulp-rename": "^1.2.2",
     "gulp-ruby-haml": "0.0.9",
     "rivets": "^0.8.1",
     "rivets-backbone-adapter": "^2.2.0",
-    "stringify": "^4.0.1"
+    "stringify": "^4.0.1",
+    "unslider": "git+https://github.com/idiot/unslider.git",
+    "webui-popover": "^1.2.5",
+    "wow": "git+https://github.com/matthieua/WOW.git"
+  },
+  "browser": {
+    "jquery": "./node_modules/jquery/dist/jquery.js",
+    "webui-popover": "./node_modules/webui-popover/dist/jquery.webui-popover.js",
+    "tooltip": "./node_modules/bootstrap/js/tooltip.js",
+    "popover": "./node_modules/bootstrap/js/popover.js"
+  },
+
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+
+  "browserify-shim": {
+    "WOW": "wow",
+
+    "popover" : {
+      "exports": "popover",
+      "depends": [
+        "tooltip"
+      ]
+    },
+
+    "webui-popover": {
+      "exports": "webuiPopover",
+      "depends": [
+        "popover"
+      ]
+    },
+
+    "jquery": "$",
+    "unslider": {
+      "exports": "unslider",
+      "depends": [
+        "jquery:$"
+      ]
+    }
   }
 }

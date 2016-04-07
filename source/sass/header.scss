@@ -36,6 +36,10 @@ header {
 
       li {
         padding: 12px;
+
+        &:hover {
+          border : 1px solid #1b5e20;
+        }
       }
     }
 

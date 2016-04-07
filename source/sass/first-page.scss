@@ -13,8 +13,13 @@ section#first-page {
   background-size: auto;
   justify-content: space-between;
 
+  .unslider-nav {
+    margin-top: 24px !important;
+  }
+  
   article.slider {
-    margin-top: auto;
+    margin-top: 64px;
+
 
     .title {
       text-align: center;

@@ -3,6 +3,11 @@
 		%meta{ :"http-equiv" => "content-type" , :content =>"text/html; charset=utf-8" }
 		%link{ :href => 'components\components-font-awesome\css\font-awesome.min.css'}
 		%link{ :href=>'css/general_all.css' , :type=>'text/css' , :rel=>'stylesheet' }
+		%link{ :href => 'components\unslider\dist\css\unslider.css', :type=>'text/css' , :rel=>'stylesheet'}
+		%link{ :href => 'components\unslider\dist\css\unslider-dots.css', :type=>'text/css' , :rel=>'stylesheet'}
+		%link{ :href => 'components\animate.css\animate.min.css', :type=>'text/css' , :rel=>'stylesheet'}
+		%link{ :href => 'components\webui-popover\dist\jquery.webui-popover.min.css', :type=>'text/css' , :rel=>'stylesheet'}
+
 	%body
 
 		%main
@@ -10,7 +15,8 @@
 			%section#first-page
 				%header
 					%aside
-						%img{ :src=>'images/logo.jpg'}
+						%a{ :href => 'index.html' }
+							%img{ :src=>'images/logo.jpg'}
 					%nav
 						%ul
 							%li
@@ -32,9 +38,9 @@
 					%aside
 						%article
 							.button
-								%a Регистрация
+								%a{ :href => 'http://lk.cdek.ru/index.php/site/register'} Регистрация
 							.button
-								%a Вход
+								%a{ :href => 'http://lk.cdek.ru/index.php/site/login'} Вход
 						%article
 							%p Ваш город
 							.line
@@ -50,15 +56,21 @@
 								%input{ :type => 'text', :placeholder => 'Введите трек номер' }
 
 				%article.slider
-					.title
-						%h1 Перевод наложенного
-						%h1
-							платежа на
-							%strong 3-ий день!
-					.caption
-						Обьединение отделений компании СДЭК предоставляет особые условия для Интернет-магазинов, поступления накапливаются с Понедельника по Пятницу и отправляются каждый Понедельник!
+					%ul
+						%li
+							.title
+								%h1 Перевод наложенного
+								%h1
+									платежа на
+									%strong 3-ий день!
+							.caption
+								Обьединение отделений компании СДЭК предоставляет особые условия для Интернет-магазинов, поступления накапливаются с Понедельника по Пятницу и отправляются каждый Понедельник!
+
+						%li Another slide
+						%li My last slide
 
 				%article.language
+					#google_translate_element
 					%a.active{ :href=>'#' } Rus
 					%a{ :href=>'#' } Eng
 					%a{ :href=>'#' } Chn
@@ -97,31 +109,35 @@
 					%h1 Почему это выгодно для Вас
 
 					%ul.whylist
-						%li
+						%li.wow.fadeIn
 							%span.fa-stack.fa-lg
 								%i.fa.fa-circle.fa-stack-2x
 								%i.fa.fa-phone.fa-stack-1x.fa-inverse
 							.desc-wrapper
 								.desc
 									Перевод наложенного платежа в 9:00 утра
+								.desc-more
+									Desk more field
 							.more-wrapper
 								%span.more
 									Подробнее
 									%span.arrow >
 
-						%li
+						%li.wow.fadeIn
 							%span.fa-stack.fa-lg
 								%i.fa.fa-circle.fa-stack-2x
 								%i.fa.fa-gift.fa-stack-1x.fa-inverse
 							.desc-wrapper
 								.desc
 									Бесплатная API интеграция
+								.desc-more
+									Desk more field
 							.more-wrapper
 								%span.more
 									Подробнее
 									%span.arrow >
 
-						%li
+						%li.wow.fadeIn
 							%span.fa-stack.fa-lg
 								%i.fa.fa-circle.fa-stack-2x
 								%i.fa.fa-mobile.fa-stack-1x.fa-inverse
@@ -129,18 +145,22 @@
 								.desc
 									%strong СМС-
 									оповещения с номером курьера
+								.desc-more
+									Desk more field
 							.more-wrapper
 								%span.more
 									Подробнее
 									%span.arrow >
 
-						%li
+						%li.wow.fadeIn
 							%span.fa-stack.fa-lg
 								%i.fa.fa-circle.fa-stack-2x
 								%i.fa.fa-money.fa-stack-1x.fa-inverse
 							.desc-wrapper
 								.desc
 									Финансовая надежность
+								.desc-more
+									Desk more field
 							.more-wrapper
 								%span.more
 									Подробнее
@@ -152,19 +172,19 @@
 
 						%div
 							%span.add-services
-								%span.fa-stack
+								%span.fa-stack{ :data => { :content => 'текст с объяснением', :animation => 'pop'} }
 									-# %i.fa.fa-circle.fa-stack-2x
 									%i.fa.fa-exclamation.fa-stack-1x
 
-								%span.fa-stack
+								%span.fa-stack{ :data => { :content => 'текст с объяснением', :animation => 'pop'} }
 									-# %i.fa.fa-circle.fa-stack-2x
 									%i.fa.fa-sign-out.fa-stack-1x
 
-								%span.fa-stack
+								%span.fa-stack{ :data => { :content => 'текст с объяснением', :animation => 'pop'} }
 									-# %i.fa.fa-circle.fa-stack-2x
 									%i.fa.fa-car.fa-stack-1x
 
-								%span.fa-stack
+								%span.fa-stack{ :data => { :content => 'текст с объяснением', :animation => 'pop'} }
 									-# %i.fa.fa-circle.fa-stack-2x
 									%i.fa.fa-line-chart.fa-stack-1x
 
@@ -174,49 +194,57 @@
 			%section#third-page.info-page
 				.content
 					%ul.whylist
-						%li
+						%li.wow.fadeIn
 							%span.fa-stack.fa-lg
 								%i.fa.fa-circle.fa-stack-2x
 								%i.fa.fa-phone.fa-stack-1x.fa-inverse
 							.desc-wrapper
 								.desc
 									Бесплатный прозвон клиентов перед доставкой
+								.desc-more
+									Desk more field
 							.more-wrapper
 								%span.more
 									Подробнее
 									%span.arrow >
 
-						%li
+						%li.wow.fadeIn
 							%span.fa-stack.fa-lg
 								%i.fa.fa-circle.fa-stack-2x
 								%i.fa.fa-gift.fa-stack-1x.fa-inverse
 							.desc-wrapper
 								.desc
 									Бесплатная фирменная упаковка и маркировка посылки
+								.desc-more
+									Desk more field
 							.more-wrapper
 								%span.more
 									Подробнее
 									%span.arrow >
 
-						%li
+						%li.wow.fadeIn
 							%span.fa-stack.fa-lg
 								%i.fa.fa-circle.fa-stack-2x
 								%i.fa.fa-mobile.fa-stack-1x.fa-inverse
 							.desc-wrapper
 								.desc
 									СМС- оповещение с номером курьера
+								.desc-more
+									Desk more field
 							.more-wrapper
 								%span.more
 									Подробнее
 									%span.arrow >
 
-						%li
+						%li.wow.fadeIn
 							%span.fa-stack.fa-lg
 								%i.fa.fa-circle.fa-stack-2x
 								%i.fa.fa-money.fa-stack-1x.fa-inverse
 							.desc-wrapper
 								.desc
 									СМС- оповещение с номером курьера
+								.desc-more
+									Desk more field
 							.more-wrapper
 								%span.more
 									Подробнее
@@ -228,19 +256,19 @@
 
 						%div
 							%span.add-services
-								%span.fa-stack
+								%span.fa-stack{ :data => { :content => 'текст с объяснением', :animation => 'pop'} }
 									-# %i.fa.fa-circle.fa-stack-2x
 									%i.fa.fa-exclamation.fa-stack-1x
 
-								%span.fa-stack
+								%span.fa-stack{ :data => { :content => 'текст с объяснением', :animation => 'pop'} }
 									-# %i.fa.fa-circle.fa-stack-2x
 									%i.fa.fa-sign-out.fa-stack-1x
 
-								%span.fa-stack
+								%span.fa-stack{ :data => { :content => 'текст с объяснением', :animation => 'pop'} }
 									-# %i.fa.fa-circle.fa-stack-2x
 									%i.fa.fa-car.fa-stack-1x
 
-								%span.fa-stack
+								%span.fa-stack{ :data => { :content => 'текст с объяснением', :animation => 'pop'} }
 									-# %i.fa.fa-circle.fa-stack-2x
 									%i.fa.fa-line-chart.fa-stack-1x
 
@@ -274,15 +302,15 @@
 									%p Откуда
 									.styled-select.blue
 										%select
-											%option Санкт-Петербург
-											%option Москва
+											%option Склад
+											%option Дверь
 
 								.fieldset-input
 									%p Куда
 									.styled-select.blue
 										%select
-											%option Санкт-Петербург
-											%option Москва
+											%option Склад
+											%option Дверь
 
 						%article.post-weight
 							%img{ :src => 'images/ico-fourth-page-box.png' }
@@ -310,8 +338,10 @@
 											опция
 
 						.calc-result
-							%strong Итого:
-							%span 250 рублей
+							%strong
+								Итого:
+							%span
+								250 рублей
 
 				.ranger
 					.style-range
@@ -329,46 +359,121 @@
 			%section#sixth-page
 				#sixth-page-overlay
 				-# #cdek_map
-				%iframe{ :src=>"https://www.google.com/maps/d/embed?mid=zyyKoXrs15N0.kmgWNIl6rS_g", :width=>"100%", :height=>"480"}
+				-# %iframe{ :src=>"https://www.google.com/maps/d/embed?mid=zyyKoXrs15N0.kmgWNIl6rS_g", :width=>"100%", :height=>"480"}
+				-# %iframe{ :src => "https://ru.batchgeo.com/map/5d06b4c1024195f1d6197324bac66732", :width => "100%", :height => "480" }
+				%iframe{ :src => "https://mapalist.com/map/582448", :width => "100%", :height => "480", :xml => { :lang => "ru"} }
 
 			%section.section-page-title
 				%h1 Отзывы
 				%p С нами работают крупные компании
 
 			%section#eighth-page.info-page
-				.content
-					%article
-						.message-box
-							.dialogbox
-								.body
-									.message
-										%strong Lorem ipsum dolor sit amet
-										%br
-										%span Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-									%span.tip.tip-down
-						%img{ :src => 'images/virgin-logo.png' }
+				.slider
+					%ul
+						%li
+							.content
+								%article
+									.message-box
+										.dialogbox
+											.body
+												.message
+													%strong Lorem ipsum dolor sit amet
+													%br
+													%span Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+												%span.tip.tip-down
+									%img{ :src => 'images/virgin-logo.png' }
 
-					%article
-						.message-box
-							.dialogbox
-								.body
-									.message
-										%strong Lorem ipsum dolor sit amet
-										%br
-										%span Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-									%span.tip.tip-down
-						%img{ :src => 'images/lg-logo.png' }
+								%article
+									.message-box
+										.dialogbox
+											.body
+												.message
+													%strong Lorem ipsum dolor sit amet
+													%br
+													%span Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+												%span.tip.tip-down
+									%img{ :src => 'images/lg-logo.png' }
 
-					%article
-						.message-box
-							.dialogbox
-								.body
-									.message
-										%strong Lorem ipsum dolor sit amet
-										%br
-										%span Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-									%span.tip.tip-down
-						%img{ :src => 'images/via-logo.png' }
+								%article
+									.message-box
+										.dialogbox
+											.body
+												.message
+													%strong Lorem ipsum dolor sit amet
+													%br
+													%span Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+												%span.tip.tip-down
+									%img{ :src => 'images/via-logo.png' }
+
+						%li
+							.content
+								%article
+									.message-box
+										.dialogbox
+											.body
+												.message
+													%strong Lorem ipsum dolor sit amet
+													%br
+													%span Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+												%span.tip.tip-down
+									%img{ :src => 'images/virgin-logo.png' }
+
+								%article
+									.message-box
+										.dialogbox
+											.body
+												.message
+													%strong Lorem ipsum dolor sit amet
+													%br
+													%span Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+												%span.tip.tip-down
+									%img{ :src => 'images/lg-logo.png' }
+
+								%article
+									.message-box
+										.dialogbox
+											.body
+												.message
+													%strong Lorem ipsum dolor sit amet
+													%br
+													%span Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+												%span.tip.tip-down
+									%img{ :src => 'images/via-logo.png' }
+
+						%li
+							.content
+								%article
+									.message-box
+										.dialogbox
+											.body
+												.message
+													%strong Lorem ipsum dolor sit amet
+													%br
+													%span Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+												%span.tip.tip-down
+									%img{ :src => 'images/virgin-logo.png' }
+
+								%article
+									.message-box
+										.dialogbox
+											.body
+												.message
+													%strong Lorem ipsum dolor sit amet
+													%br
+													%span Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+												%span.tip.tip-down
+									%img{ :src => 'images/lg-logo.png' }
+
+								%article
+									.message-box
+										.dialogbox
+											.body
+												.message
+													%strong Lorem ipsum dolor sit amet
+													%br
+													%span Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+												%span.tip.tip-down
+									%img{ :src => 'images/via-logo.png' }
 
 			%footer
 
@@ -389,5 +494,6 @@
 						%img{ :src => 'images/twitter-logo.png' }
 						%img{ :src => 'images/vk-logo.png' }
 
+		%script{ :src => '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit' }
 		%script{ :src => 'https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js' }
 		%script{ :type=>'text/javascript' , :src=>'bundle.js' }
