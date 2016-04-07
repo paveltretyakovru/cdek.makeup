@@ -1,0 +1,33 @@
+#add-blocks {
+  display: none;
+}
+
+#select-city {
+  display: flex;
+
+  & > * {
+    margin: 16px 6px;
+  }
+
+  button {
+    color: #fff;
+    border: none;
+    padding: 4px 16px;
+    border-radius: 4px;
+  }
+
+  p {
+    color: #949494;
+    span {
+      text-decoration: underline;
+    }
+  }
+
+  .btn-yes {
+    background-color: #448aff;
+  }
+
+  .btn-select {
+    background-color: #757575;
+  }
+}

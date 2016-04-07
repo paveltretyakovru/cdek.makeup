@@ -50,6 +50,7 @@
     "gulp-connect": "^2.3.1",
     "gulp-rename": "^1.2.2",
     "gulp-ruby-haml": "0.0.9",
+    "jquery.cookie": "^1.4.1",
     "rivets": "^0.8.1",
     "rivets-backbone-adapter": "^2.2.0",
     "stringify": "^4.0.1",
@@ -63,30 +64,25 @@
     "tooltip": "./node_modules/bootstrap/js/tooltip.js",
     "popover": "./node_modules/bootstrap/js/popover.js"
   },
-
   "browserify": {
     "transform": [
       "browserify-shim"
     ]
   },
-
   "browserify-shim": {
     "WOW": "wow",
-
-    "popover" : {
+    "popover": {
       "exports": "popover",
       "depends": [
         "tooltip"
       ]
     },
-
     "webui-popover": {
       "exports": "webuiPopover",
       "depends": [
         "popover"
       ]
     },
-
     "jquery": "$",
     "unslider": {
       "exports": "unslider",

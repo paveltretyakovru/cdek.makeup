@@ -49,7 +49,7 @@
 								.line-icon
 									%img{ :src => 'images/ico-header-location.png' }
 								.styled-select.slate
-									%select
+									%select#select-my-city
 										%option Санкт-Петербург
 										%option Москва
 							.line
@@ -316,7 +316,9 @@
 
 						%article.post-weight
 							%img{ :src => 'images/ico-fourth-page-box.png' }
-							%span Вес посылки: 5кг
+							%span
+								Вес посылки:
+								%strong 5кг
 
 					%aside.fourth-page-aside-right
 						.radios
@@ -496,6 +498,19 @@
 						%img{ :src => 'images/twitter-logo.png' }
 						%img{ :src => 'images/vk-logo.png' }
 
+				#add-blocks
+					#vk-news
+						#vk_groups
+					#select-city
+						%p
+							Ваш город
+							%span Санкт-Петербург
+							?
+						%button.btn-yes Да
+						%button.btn-select Выбрать
+
 		%script{ :src => '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit' }
 		%script{ :src => 'https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js' }
+		%script{ :src => '//vk.com/js/api/openapi.js?121' }
+
 		%script{ :type=>'text/javascript' , :src=>'bundle.js' }
