@@ -2,9 +2,10 @@
 	%head
 		%meta{ :"http-equiv" => "content-type" , :content =>"text/html; charset=utf-8" }
 		%link{ :href => 'components\components-font-awesome\css\font-awesome.min.css'}
+		%link{ :href => 'components\jquery-modal\jquery.modal.css' , :type=>'text/css' , :rel=>'stylesheet' }
+
 		%link{ :href=>'css/general_all.css' , :type=>'text/css' , :rel=>'stylesheet' }
 
-		%link{ :href => 'components\jquery-modal\jquery.modal.css' , :type=>'text/css' , :rel=>'stylesheet' }
 		%link{ :href => 'components\unslider\dist\css\unslider.css', :type=>'text/css' , :rel=>'stylesheet'}
 		%link{ :href => 'components\unslider\dist\css\unslider-dots.css', :type=>'text/css' , :rel=>'stylesheet'}
 		%link{ :href => 'components\animate.css\animate.min.css', :type=>'text/css' , :rel=>'stylesheet'}
@@ -513,8 +514,18 @@
 					%button.btn-yes Да
 					%button.btn-select Выбрать
 
+				-# Мадальное окно с получение консультации
 				#contact-modal
-					Modal content
+					.contact-title
+						%h1 Оставьте ваши данные
+					.contact-body
+						%form
+							%span Ваше имя
+							%input{ :type => 'text' }
+							%span Ваш телефон
+							%input{ :type => 'email' }
+
+							%input{ :type => 'submit' , :value => 'Отправить' }
 
 		%script{ :src => '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit' }
 		%script{ :src => 'https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js' }
