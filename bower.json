@@ -1,17 +1,12 @@
 {
   "name": "cdek.makeup",
-  "description": "Creating application with Borwserifi + ES6 + Marionette",
+  "description": "cdek components",
   "main": "index.js",
   "authors": [
     "Tretyakov Pavel <tretyakovpavel.ru@gmail.com>"
   ],
   "license": "ISC",
-  "keywords": [
-    "es6",
-    "marionette",
-    "backbone",
-    "browserifi"
-  ],
+  "keywords": [],
   "homepage": "https://github.com/ptretyakov/cdek.makeup",
   "moduleType": [],
   "ignore": [
