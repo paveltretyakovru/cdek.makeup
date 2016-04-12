@@ -17,8 +17,13 @@ section#first-page {
     margin-top: 24px !important;
   }
 
+  .unslider {
+    overflow: hidden;
+  }
+
   article.slider {
-    margin-top: 64px;
+    margin-top: 200px;
+    overflow: hidden;
 
 
     .title {

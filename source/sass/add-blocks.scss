@@ -34,7 +34,7 @@
 
 #contact-modal {
   font-size: 24px;
-  font-family: 'Roboto Light';
+  font-family: 'Roboto';
 
   .contact-title {
     width: 100%;
@@ -55,6 +55,7 @@
 
   .contact-body {
     padding: 0px 54px;
+    font-weight: 300;
 
     form {
       display: flex;
