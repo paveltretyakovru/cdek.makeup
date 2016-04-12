@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import popover from 'popover';
 import 'webui-popover';
+import 'jquery.cookie';
 
 let InitPopovers = () => {
   let $selectCityForm = $('#select-my-city');
@@ -15,8 +16,16 @@ let InitPopovers = () => {
     $selectCityForm.webuiPopover('hide');
   });
 
-  $selectCityPopover.find('.btn-select').on('click', () => {
+  $selectCityPopover.find('.btn-yes').on('click', () => {
+    $selectCityForm.val(0);
+  });
 
+  $selectCityPopover.find('.btn-select').on('click', () => {
+    $selectCityForm.focus().click();
+  });
+
+  $selectCityForm.on('change', () => {
+    console.log('Form was change');
   });
 }
 

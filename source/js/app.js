@@ -1,6 +1,7 @@
 'use strict';
 import $ from 'jquery';
 import 'jquery.cookie';
+import 'jquery-modal';
 
 import InitSliders from 'modules/InitSliders';
 import InitShowMore from 'modules/InitShowMore';
@@ -14,6 +15,13 @@ window.$ = $;
 InitScrollFadeEffects();
 InitSliders();
 InitPopovers();
+
+$('.js-show-contact-modal').on('click', () => {
+  $("#contact-modal").modal({
+    fadeDuration: 500
+  });
+  // console.log('Show modal');
+});
 
 $(document).ready( () => {
   $(window).load( () => {

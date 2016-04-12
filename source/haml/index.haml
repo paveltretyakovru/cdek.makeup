@@ -3,6 +3,8 @@
 		%meta{ :"http-equiv" => "content-type" , :content =>"text/html; charset=utf-8" }
 		%link{ :href => 'components\components-font-awesome\css\font-awesome.min.css'}
 		%link{ :href=>'css/general_all.css' , :type=>'text/css' , :rel=>'stylesheet' }
+
+		%link{ :href => 'components\jquery-modal\jquery.modal.css' , :type=>'text/css' , :rel=>'stylesheet' }
 		%link{ :href => 'components\unslider\dist\css\unslider.css', :type=>'text/css' , :rel=>'stylesheet'}
 		%link{ :href => 'components\unslider\dist\css\unslider-dots.css', :type=>'text/css' , :rel=>'stylesheet'}
 		%link{ :href => 'components\animate.css\animate.min.css', :type=>'text/css' , :rel=>'stylesheet'}
@@ -50,8 +52,9 @@
 									%img{ :src => 'images/ico-header-location.png' }
 								.styled-select.slate
 									%select#select-my-city
-										%option Санкт-Петербург
-										%option Москва
+										%option Выберите город...
+										%option{ :value => "0" } Санкт-Петербург
+										%option{ :value => "1" } Москва
 							.line
 								.line-icon
 									%img{ :src => 'images/ico-header-search.png' }
@@ -354,7 +357,8 @@
 			%section#fifth-page
 				%h1 Остались вопросы?
 				%p Получите бесплатную консультацию
-				%button Получить
+				%button.js-show-contact-modal
+					Получить
 
 			%section.section-page-title
 				%h1 Наши пункты выдачи
@@ -498,16 +502,19 @@
 						%img{ :src => 'images/twitter-logo.png' }
 						%img{ :src => 'images/vk-logo.png' }
 
-				#add-blocks
-					#vk-news
-						#vk_groups
-					#select-city
-						%p
-							Ваш город
-							%span Санкт-Петербург
-							?
-						%button.btn-yes Да
-						%button.btn-select Выбрать
+			#add-blocks
+				#vk-news
+					#vk_groups
+				#select-city
+					%p
+						Ваш город
+						%span Санкт-Петербург
+						?
+					%button.btn-yes Да
+					%button.btn-select Выбрать
+
+				#contact-modal
+					Modal content
 
 		%script{ :src => '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit' }
 		%script{ :src => 'https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js' }

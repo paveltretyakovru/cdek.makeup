@@ -50,6 +50,7 @@
     "gulp-connect": "^2.3.1",
     "gulp-rename": "^1.2.2",
     "gulp-ruby-haml": "0.0.9",
+    "jquery-modal": "^0.7.0",
     "jquery.cookie": "^1.4.1",
     "rivets": "^0.8.1",
     "rivets-backbone-adapter": "^2.2.0",
