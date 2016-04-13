@@ -101,12 +101,13 @@ section#first-page {
   }
 
   p{
+    border-radius: 54px;
+    padding:16px;
+    background: #fff;
+    width: 64px;
+    text-align: center;
     img {
       height  : 64px;
-      width: 64px;
-      background: #fff;
-      padding:16px;
-      border-radius: 54px;
     }
   }
 
