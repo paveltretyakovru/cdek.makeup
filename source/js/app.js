@@ -3,6 +3,7 @@ import $ from 'jquery';
 import 'jquery.cookie';
 import 'jquery-modal';
 
+import InitGeoApi from 'modules/InitGeoApi';
 import InitSliders from 'modules/InitSliders';
 import InitShowMore from 'modules/InitShowMore';
 import InitPopovers from 'modules/InitPopovers';
@@ -15,6 +16,7 @@ window.$ = $;
 InitScrollFadeEffects();
 InitSliders();
 InitPopovers();
+InitGeoApi();
 
 $('.js-show-contact-modal').on('click', () => {
   $("#contact-modal").modal({

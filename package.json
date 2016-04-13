@@ -46,6 +46,7 @@
     "bootstrap": "^3.3.6",
     "bootstrap-browserify": "^2.1.1",
     "browserify-shim": "^3.8.12",
+    "geocomplete": "^1.6.5",
     "gulp-compass": "^2.1.0",
     "gulp-connect": "^2.3.1",
     "gulp-rename": "^1.2.2",
@@ -63,7 +64,8 @@
     "jquery": "./node_modules/jquery/dist/jquery.js",
     "webui-popover": "./node_modules/webui-popover/dist/jquery.webui-popover.js",
     "tooltip": "./node_modules/bootstrap/js/tooltip.js",
-    "popover": "./node_modules/bootstrap/js/popover.js"
+    "popover": "./node_modules/bootstrap/js/popover.js",
+    "geocomplete": "./node_modules/geocomplete/jquery.geocomplete.min.js"
   },
   "browserify": {
     "transform": [
@@ -87,6 +89,12 @@
     "jquery": "$",
     "unslider": {
       "exports": "unslider",
+      "depends": [
+        "jquery:$"
+      ]
+    },
+    "geocomplete": {
+      "exports": "geocomplete",
       "depends": [
         "jquery:$"
       ]

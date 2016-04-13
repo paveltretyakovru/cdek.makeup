@@ -36,8 +36,6 @@
 							%img{ :src => 'images/ico-header-phone.png' }
 							%span 8 800 337 80 91
 
-
-
 					.tringle
 						%img{ :src => 'images/header-tringel.png' }
 					%aside
@@ -52,10 +50,10 @@
 								.line-icon
 									%img{ :src => 'images/ico-header-location.png' }
 								.styled-select.slate
-									%select#select-my-city
-										%option Выберите город...
-										%option{ :value => "0" } Санкт-Петербург
-										%option{ :value => "1" } Москва
+									%input#select-my-city
+										-# %option Выберите город...
+										-# %option{ :value => "0" } Санкт-Петербург
+										-# %option{ :value => "1" } Москва
 							.line
 								.line-icon
 									%img{ :src => 'images/ico-header-search.png' }
@@ -537,7 +535,7 @@
 							%input{ :type => 'submit' , :value => 'Отправить' }
 
 		%script{ :src => '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit' }
-		%script{ :src => 'https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js' }
+		%script{ :src => 'http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false', :type => 'text/javascript' }
 		%script{ :src => '//vk.com/js/api/openapi.js?121' }
 
 		%script{ :type=>'text/javascript' , :src=>'bundle.js' }

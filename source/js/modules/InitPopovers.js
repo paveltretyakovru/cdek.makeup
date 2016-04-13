@@ -17,7 +17,7 @@ let InitPopovers = () => {
   });
 
   $selectCityPopover.find('.btn-yes').on('click', () => {
-    $selectCityForm.val(0);
+    $selectCityForm.val('Санкт-Петербург');
   });
 
   $selectCityPopover.find('.btn-select').on('click', () => {
