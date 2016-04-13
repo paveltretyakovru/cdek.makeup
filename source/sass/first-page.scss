@@ -92,26 +92,38 @@ section#first-page {
   background: url(../images/bg-icons.png) #fff bottom;
   background-size: cover;
 
-  strong {
-    font-weight: 400
+  .figures-wrapper {
+    width: 1200px;
+    display: flex;
   }
 
   figure {
-    display: flex
-  }
+    width: 25%;
+    display: flex;
 
-  p{
-    border-radius: 54px;
-    padding:16px;
-    background: #fff;
-    width: 64px;
-    text-align: center;
-    img {
-      height  : 64px;
+    div {
+      width: 100px;
+      height: 100px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 48px;
+    }
+
+    figcaption {
+      width: 124px;
+      margin-left: 18px;
+      padding-top: 8px;
+      line-height: 1.5;
+    }
+
+    .fat {
+      width: 150px;
     }
   }
 
-  figcaption {
-    padding: 16px;
+  strong {
+    font-weight: 500
   }
 }
