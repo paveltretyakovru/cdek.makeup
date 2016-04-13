@@ -102,6 +102,7 @@ header {
       font-size: 12px;
 
       & > p {
+        display: flex;
         font-style: italic;
         margin-left: 24px;
         margin-bottom: 8px;

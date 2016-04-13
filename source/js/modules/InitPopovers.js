@@ -4,11 +4,11 @@ import 'webui-popover';
 import 'jquery.cookie';
 
 let InitPopovers = () => {
-  let $selectCityForm = $('#select-my-city');
+  let $selectCityForm = $('#field-for-popover-city');
   let $selectCityPopover = $('#select-city');
 
   $('.add-services span').webuiPopover({trigger: 'hover'});
-  $selectCityForm.webuiPopover({url: '#select-city', trigger: 'manual'});
+  $selectCityForm.webuiPopover({url: '#select-city', trigger: 'manual', placement: 'bottom'});
 
   $selectCityForm.webuiPopover('show');
 
