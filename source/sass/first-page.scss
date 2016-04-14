@@ -14,7 +14,10 @@ section#first-page {
   justify-content: space-between;
 
   .unslider-nav {
-    margin-top: 24px !important;
+    // margin-top: 24px !important;
+    position: absolute;
+    left: 50%;
+    bottom: 180px;
   }
 
   .unslider {
