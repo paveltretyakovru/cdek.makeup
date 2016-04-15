@@ -2,7 +2,14 @@
   display: none;
 }
 
-#select-city {
+//.ссылка с выбранным городом
+#selected-city {
+  color: #fff;
+  font-size: 16px;
+  text-decoration: underline;
+}
+
+#select-city-popover {
   display: flex;
   align-items: center;
 
@@ -25,7 +32,27 @@
     }
   }
 
-  .btn-yes {
+  input {
+    width: 100%;
+  }
+
+  #input-city-block {
+    display: none;
+
+    button {
+      margin-left: 15px;
+    }
+
+    input {
+      padding: 8px;
+    }
+  }
+
+  #input-google-geo {
+    min-width: 300px;
+  }
+
+  .btn-yes, .btn-geo-yes {
     background-color: #448aff;
   }
 
@@ -88,4 +115,8 @@
 .modal {
   padding : 0px;
   min-width: 478px;
+}
+
+#webuiPopover0 {
+  z-index: 1;
 }

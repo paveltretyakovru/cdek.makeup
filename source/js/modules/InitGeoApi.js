@@ -2,7 +2,7 @@ import $ from 'jquery';
 import 'geocomplete';
 
 let InitGeoApi = () => {
-  $('#select-my-city').geocomplete();
+  $('#input-google-geo').geocomplete();
 }
 
 

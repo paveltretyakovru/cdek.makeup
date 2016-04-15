@@ -53,8 +53,9 @@
 							.line
 								.line-icon
 									%img{ :src => 'images/ico-header-location.png' }
-								.styled-select.slate
-									%input#select-my-city
+								%a#selected-city{ :href => '#'} Санкт-Петербург
+								-# .styled-select.slate
+								-# 	%input#select-my-city
 										-# %option Выберите город...
 										-# %option{ :value => "0" } Санкт-Петербург
 										-# %option{ :value => "1" } Москва
@@ -505,13 +506,18 @@
 			#add-blocks
 				#vk-news
 					#vk_groups
-				#select-city
-					%p
-						Ваш город
-						%span Санкт-Петербург
-						?
-					%button.btn-yes Да
-					%button.btn-select Выбрать
+				#select-city-popover
+					#confirm-spb-block
+						%p
+							Ваш город
+							%span Санкт-Петербург
+							?
+							%button.btn-yes Да
+							%button.btn-select Выбрать
+
+					#input-city-block
+						%input#input-google-geo{ :value => 'Санкт-Петербург, Россия' }
+						%button.btn-geo-yes Да
 
 				-# Мадальное окно с получение консультации
 				#contact-modal
