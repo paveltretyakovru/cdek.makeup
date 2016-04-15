@@ -7,8 +7,8 @@ let InitPopovers = () => {
   let $selectCityForm = $('#field-for-popover-city');
   let $selectCityPopover = $('#select-city');
 
-  $('.add-services span').webuiPopover({trigger: 'hover'});
-  $selectCityForm.webuiPopover({url: '#select-city', trigger: 'manual', placement: 'bottom'});
+  $('.add-services img').webuiPopover({trigger: 'hover'});
+  $selectCityForm.webuiPopover({url: '#select-city', trigger: 'manual', placement: 'bottom-left'});
 
   $selectCityForm.webuiPopover('show');
 

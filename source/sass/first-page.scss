@@ -17,7 +17,14 @@ section#first-page {
     // margin-top: 24px !important;
     position: absolute;
     left: 50%;
-    bottom: 180px;
+    bottom: 172px;
+
+    li {
+      width: 16px;
+      height: 16px;
+      border-radius: 16px;
+      margin-left: 16px;
+    }
   }
 
   .unslider {
