@@ -20,7 +20,7 @@ InitGeoApi();
 
 $('.js-show-contact-modal').on('click', () => {
   $("#contact-modal").modal({
-    fadeDuration: 500
+    
   });
   // console.log('Show modal');
 });
