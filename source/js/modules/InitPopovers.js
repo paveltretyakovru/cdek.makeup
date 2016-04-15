@@ -47,7 +47,12 @@ let InitPopovers = () => {
   });
 
   $('.btn-geo-yes').on('click' , () => {
-    $selectedCityLink.text($inputGoogleGeo.val());
+    if($inputGoogleGeo.val()) {
+      $selectedCityLink.text($inputGoogleGeo.val());
+    } else {
+      $selectedCityLink.text('Выберите город');
+    }
+
     $fieldForPopoverCity.webuiPopover('hide');
     hideInputCityBlock();
   });
