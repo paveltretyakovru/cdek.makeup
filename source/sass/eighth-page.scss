@@ -8,7 +8,7 @@ section#eighth-page {
     justify-content: center;
 
     & > * {
-      
+
       text-align: center;
 
       .message {
@@ -27,11 +27,24 @@ section#eighth-page {
     }
   }
 
-  .unslider-nav ol li {
-    background-color: #15773D;
+  .unslider-nav {
+    ol {
+      padding-bottom: 8px;
+      margin-top: 24px;
+    }
+
+    li {
+      width: 12px;
+      height: 12px;
+      border-radius: 16px;
+      margin-left: 16px;
+      border-color: #339950;
+    }
+
+    li.unslider-active{
+      background-color: #339950;
+    }
+
   }
 
-  .unslider-nav ol li.unslider-active{
-    background-color: #339950;
-  }
 }
