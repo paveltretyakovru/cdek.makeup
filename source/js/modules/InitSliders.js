@@ -2,7 +2,7 @@ import unslider from 'unslider';
 
 let InitSliders = () => {
   $('.slider').unslider({
-    // autoplay : true,
+    autoplay : true,
     arrows : false
   });
 }
