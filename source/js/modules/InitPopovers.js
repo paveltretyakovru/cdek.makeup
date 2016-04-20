@@ -59,7 +59,7 @@ let InitPopovers = () => {
 // #############################################################
 
 // ADD SERVISEC
-  $('.add-services img').webuiPopover({trigger: 'hover'});
+  $('.add-services a').webuiPopover({trigger: 'hover'});
 }
 
 export default InitPopovers;
