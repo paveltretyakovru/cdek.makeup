@@ -308,6 +308,48 @@
 			%section#fourth-page.info-page
 				.sides
 					%aside.fourth-page-aside-left
+
+						google
+						%h3 Расчёт стоимости доставки СДЭК
+						Город-отправитель: Новосибирск
+						%br/
+						%label{:for => "city"} Город-получатель:
+						.ui-widget{:style => "display: inline-block;"}
+							%input#city/
+							%br/
+						%form#cdek{:action => "", :method => "GET"}
+							/ Версия API
+							%input{:hidden => "", :name => "version", :value => "1.0"}/
+							/ Планируемая дата доставки (ГГГГ-ММ-ДД)
+							%input{:hidden => "", :name => "dateExecute", :value => "2012-07-27"}/
+							/ Для получения логина/пароля (в т.ч. тестового) обратитесь к разработчикам СДЭК
+							/ <input name="authLogin" value="authLoginString" hidden />
+							/ <input name="secure" value="secureString" hidden />
+							/ Город-отправитель, Новосибирск
+							%input{:hidden => "", :name => "senderCityId", :value => "270"}/
+							/ Город-получатель
+							%input#receiverCityId{:hidden => "", :name => "receiverCityId", :value => ""}/
+							/ id тарифа, Посылка склад-дверь
+							%input{:hidden => "", :name => "tariffId", :value => "137"}/
+							/ режим доставки, склад-дверь
+							/ <input name="modeId" value="3" hidden />
+							/ Вес места, кг.
+							%input{:hidden => "", :name => "goods[0].weight", :value => "0.3"}/
+							/ Длина места, см.
+							%input{:hidden => "", :name => "goods[0].length", :value => "10"}/
+							/ Ширина места, см.
+							%input{:hidden => "", :name => "goods[0].width", :value => "7"}/
+							/ Высота места, см.
+							%input{:hidden => "", :name => "goods[0].height", :value => "5"}/
+							/ Вес места, кг.
+							%input{:hidden => "", :name => "goods[1].weight", :value => "0.1"}/
+							/ объём места, длина*ширина*высота, метры кубические
+							%input{:hidden => "", :name => "goods[1].volume", :value => "0.1"}/
+							%input{:type => "submit", :value => "Посчитать"}/
+						%pre
+							%code#testArea
+						%code#resArea
+
 						%fieldset.town
 							.fieldset-title
 								%i.fa.fa-building-o.fa-2x
