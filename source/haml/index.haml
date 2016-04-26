@@ -3,6 +3,7 @@
 		%meta{ :"http-equiv" => "content-type" , :content =>"text/html; charset=utf-8" }
 		%link{ :href => 'components\components-font-awesome\css\font-awesome.min.css'}
 		%link{ :href => 'components\jquery-modal\jquery.modal.css' , :type=>'text/css' , :rel=>'stylesheet' }
+		%link{ :href => 'components\jquery-ui\themes\le-frog\jquery-ui.css', :type=>'text/css' , :rel=>'stylesheet'}
 
 		%link{ :href=>'css/general_all.css' , :type=>'text/css' , :rel=>'stylesheet' }
 
@@ -309,46 +310,6 @@
 				.sides
 					%aside.fourth-page-aside-left
 
-						google
-						%h3 Расчёт стоимости доставки СДЭК
-						Город-отправитель: Новосибирск
-						%br/
-						%label{:for => "city"} Город-получатель:
-						.ui-widget{:style => "display: inline-block;"}
-							%input#city/
-							%br/
-						%form#cdek{:action => "", :method => "GET"}
-							/ Версия API
-							%input{:hidden => "", :name => "version", :value => "1.0"}/
-							/ Планируемая дата доставки (ГГГГ-ММ-ДД)
-							%input{:hidden => "", :name => "dateExecute", :value => "2012-07-27"}/
-							/ Для получения логина/пароля (в т.ч. тестового) обратитесь к разработчикам СДЭК
-							/ <input name="authLogin" value="authLoginString" hidden />
-							/ <input name="secure" value="secureString" hidden />
-							/ Город-отправитель, Новосибирск
-							%input{:hidden => "", :name => "senderCityId", :value => "270"}/
-							/ Город-получатель
-							%input#receiverCityId{:hidden => "", :name => "receiverCityId", :value => ""}/
-							/ id тарифа, Посылка склад-дверь
-							%input{:hidden => "", :name => "tariffId", :value => "137"}/
-							/ режим доставки, склад-дверь
-							/ <input name="modeId" value="3" hidden />
-							/ Вес места, кг.
-							%input{:hidden => "", :name => "goods[0].weight", :value => "0.3"}/
-							/ Длина места, см.
-							%input{:hidden => "", :name => "goods[0].length", :value => "10"}/
-							/ Ширина места, см.
-							%input{:hidden => "", :name => "goods[0].width", :value => "7"}/
-							/ Высота места, см.
-							%input{:hidden => "", :name => "goods[0].height", :value => "5"}/
-							/ Вес места, кг.
-							%input{:hidden => "", :name => "goods[1].weight", :value => "0.1"}/
-							/ объём места, длина*ширина*высота, метры кубические
-							%input{:hidden => "", :name => "goods[1].volume", :value => "0.1"}/
-							%input{:type => "submit", :value => "Посчитать"}/
-						%pre
-							%code#testArea
-						%code#resArea
 
 						%fieldset.town
 							.fieldset-title
@@ -358,11 +319,11 @@
 							.fieldset-form
 								.fieldset-input
 									%p Откуда
-									%input
+									%input#input-city-from
 
 								.fieldset-input
 									%p Куда
-									%input
+									%input#input-city-to
 
 						%fieldset.worker
 							.fieldset-title
@@ -373,53 +334,52 @@
 								.fieldset-input
 									%p Откуда
 									.styled-select.blue
-										%select
-											%option Склад
-											%option Дверь
+										%select#calc-place-from
+											%option{ :value => 0 } Склад
+											%option{ :value => 1 } Дверь
 
 								.fieldset-input
 									%p Куда
 									.styled-select.blue
-										%select
-											%option Склад
-											%option Дверь
+										%select#calc-place-to
+											%option{ :value => 0 } Склад
+											%option{ :value => 1 } Дверь
 
 						%article.post-weight
 							%img{ :src => 'images/ico-fourth-page-box.png' }
 							%span
 								Вес посылки:
-								%strong 5кг
+								%strong
+									%span#range-slider-value 5
+									кг
+							#range-slider
 
 					%aside.fourth-page-aside-right
-						.radios
-							%aside
-								.style-radio
-									%input#radio01{ :type => 'radio' , :name => "radio" }
-									%label{ :for => "radio01"}
-										%span
-										%p
-											Дополнительная
-											%br
-											упаковка
-							%aside
-								.style-radio
-									%input#radio02{ :type => 'radio' , :name => "radio" }
-									%label{ :for => "radio02"}
-										%span
-										%p
-											Дополнительная
-											%br
-											опция
+						-# .radios
+						-# 	%aside
+						-# 		.style-radio
+						-# 			%input#radio01{ :type => 'radio' , :name => "radio" }
+						-# 			%label{ :for => "radio01"}
+						-# 				%span
+						-# 				%p
+						-# 					Дополнительная
+						-# 					%br
+						-# 					упаковка
+						-# 	%aside
+						-# 		.style-radio
+						-# 			%input#radio02{ :type => 'radio' , :name => "radio" }
+						-# 			%label{ :for => "radio02"}
+						-# 				%span
+						-# 				%p
+						-# 					Дополнительная
+						-# 					%br
+						-# 					опция
 
 						.calc-result
 							%strong
-								Итого:
-							%span
-								250 рублей
-
-				.ranger
-					.style-range
-						%input{ :type => 'range' , :value => '13' , :min => '1' , :max => '28'}
+								Результат:
+							%span#calc-result-block
+								0 руб
 
 			%section#fifth-page
 				%h1 Остались вопросы?
@@ -603,6 +563,27 @@
 							%input{ :type => 'email' }
 
 							%input{ :type => 'submit' , :value => 'Отправить' }
+
+				#calculator-form-block
+					%form#cdek-form{:action => "", :method => "GET"}
+						/ Город-отправитель, Новосибирск
+						%input#senderCityId{:hidden => "", :name => "senderCityId", :value => ""}
+						/ Город-получатель
+						%input#receiverCityId{:hidden => "", :name => "receiverCityId", :value => ""}
+						/ Версия API
+						%input{:hidden => "", :name => "version", :value => "1.0"}
+						/ id тарифа, Посылка склад-дверь
+						%input{:hidden => "", :name => "tariffId", :value => "1"}
+						/ режим доставки, склад-дверь
+						/ <input name="modeId" value="3" hidden />
+						/ Вес места, кг.
+						%input#calc-weight-input{:hidden => "", :name => "goods[0].weight", :value => "0.3"}
+						/ Длина места, см.
+						%input{:hidden => "", :name => "goods[0].length", :value => "10"}
+						/ Ширина места, см.
+						%input{:hidden => "", :name => "goods[0].width", :value => "10"}
+						/ Высота места, см.
+						%input{:hidden => "", :name => "goods[0].height", :value => "10"}
 
 		%script{ :src => '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit' }
 		%script{ :src => 'http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false', :type => 'text/javascript' }

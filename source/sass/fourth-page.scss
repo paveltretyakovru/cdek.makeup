@@ -2,7 +2,13 @@
   background: url('../images/bg-fourth-page.png') top right no-repeat;
   display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
+  // flex-direction: column;
+
+  #range-slider {
+    margin-left: auto;
+    width: 60%;
+  }
 
   .ranger {
     padding-top: 40px;
@@ -112,9 +118,8 @@
       }
 
       .calc-result {
-        margin-top: 80px;
         font-size: 40px;
-        font-family: 'Roboto Condensed';
+        font-weight: 300;
 
         strong {
           font-weight: 600;

@@ -19,6 +19,7 @@ InitSliders();
 InitPopovers();
 InitGeoApi();
 InitCalculator();
+InitRangeSlider();
 
 $('.js-show-contact-modal').on('click', () => {
   $("#contact-modal").modal({
@@ -31,7 +32,6 @@ $(document).ready( () => {
   $(window).load( () => {
 
     InitVkModules();
-    InitRangeSlider();
     InitShowMore();
 
   });
