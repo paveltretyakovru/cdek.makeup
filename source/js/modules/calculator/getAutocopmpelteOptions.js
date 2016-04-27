@@ -24,11 +24,13 @@ let getAutocopmpelteOptions = ($element,$hiddenInput) => {
         }
       });
     },
-    minLength: 1,
+    minLength: 0,
     select: (event, ui) => {
       $hiddenInput.val(ui.item.id);
       $element.trigger('change');
-    }
+    },
+    autoFocus: true,
+
   }
 }
 

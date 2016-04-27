@@ -5,7 +5,7 @@ import 'jquery-ui-browserify';
 
 // Функция собирает параметры для инициализиации autocomplete
 import getAutocopmpelteOptions from './calculator/getAutocopmpelteOptions';
-import sendCalcRequest from './calculator/sendCalcRequest';
+import {sendCalcStartRequest, sendCalcRequest} from './calculator/sendCalcRequest';
 
 /**
  * @desc Инициализация калькулятора для расчета стоимости достафки
@@ -26,7 +26,7 @@ let InitCalculator = () => {
 
   // Инициализируем autocomplete
   $inputCityFrom.autocomplete(getAutocopmpelteOptions($inputCityFrom, $hiddenCityFrom));
-  $inputCityTo.autocomplete(getAutocopmpelteOptions($inputCityTo, $hiddenCityTo));
+  $inputCityTo.autocomplete(getAutocopmpelteOptions($inputCityTo, $hiddenCityTo))
 
   // Отлавливаем событие измнения полей калькулятора
   $inputCityFrom.on('change', (event) => $cdekForm.submit());
@@ -44,6 +44,8 @@ let InitCalculator = () => {
     event.preventDefault();
     return sendCalcRequest();
   });
+
+  sendCalcStartRequest();
 }
 
 export default InitCalculator;
