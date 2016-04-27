@@ -85,8 +85,8 @@ let sendCalcStartRequest = () => {
   let $hiddenCityTo = $('#receiverCityId');
   let $hiddenCityFrom = $('#senderCityId');
 
-  $hiddenCityFrom.val(137);
-  $hiddenCityTo.val(136);
+  $hiddenCityFrom.val(136);
+  $hiddenCityTo.val(137);
 
   // Вычисляем тариф
   let tariff = 136;
@@ -119,7 +119,6 @@ let sendCalcStartRequest = () => {
     success : (data) => {
       $calcResultBlock.text('');
 
-      console.log('Calc place from val', $calcPlaceFrom, 'Calc place to val', $calcPlaceTo);
       if(data.hasOwnProperty("result")) {
         console.info(`Успешный запрос
           Цена доставки: ${data.result.price}
@@ -151,5 +150,5 @@ let sendCalcStartRequest = () => {
   return false;
 }
 
-export {sendCalcStartRequest};
+export {sendCalcStartRequest, sendCalcRequest};
 export default sendCalcRequest;

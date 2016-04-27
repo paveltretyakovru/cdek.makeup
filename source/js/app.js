@@ -11,7 +11,6 @@ import InitVkModules from 'modules/InitVkModules';
 import InitCalculator from 'modules/InitCalculator';
 import InitRangeSlider from 'modules/InitRangeSlider';
 import InitScrollFadeEffects from 'modules/InitScrollFadeEffects';
-import googleTranslateElementInit from 'modules/googleTranslateElementInit';
 
 window.$ = $;
 
@@ -30,7 +29,6 @@ $('.js-show-contact-modal').on('click', () => {
 });
 
 $(document).ready( () => {
-  googleTranslateElementInit();
 
   $(window).load( () => {
 
