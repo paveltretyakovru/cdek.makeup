@@ -17,6 +17,7 @@
 		%main
 
 			%section#first-page
+				%a{:name => "main"}
 				%header
 					#menu
 						%aside
@@ -25,15 +26,15 @@
 						%nav
 							%ul
 								%li
-									%a{ :href=>'#' } Главная
+									%a{ :href=>'#main' } Главная
 								%li
-									%a{ :href=>'#' } Почему мы
+									%a{ :href=>'#why-we' } Почему мы
 								%li
-									%a{ :href=>'#' } Отделения
+									%a{ :href=>'#office' } Отделения
 								%li
-									%a{ :href=>'#' } Отзывы
+									%a{ :href=>'#recall' } Отзывы
 								%li
-									%a{ :href=>'#', :class => 'js-show-vk-news' } Новости
+									%a{ :class => 'js-show-vk-news' } Новости
 							%article
 								%img{ :src => 'images/ico-header-phone.png' }
 								%span 8 800 337 80 91
@@ -46,11 +47,10 @@
 									%a{ :href => 'http://lk.cdek.ru/index.php/site/register'} Регистрация
 								.button
 									%a{ :href => 'http://lk.cdek.ru/index.php/site/login'} Вход
-							#field-for-popover-city
 							%article
 								%p
-									%span
-										Ваш город
+									%span Ваш город
+								#field-for-popover-city
 
 								.line
 									.line-icon
@@ -66,19 +66,19 @@
 								-# 		%img{ :src => 'images/ico-header-search.png' }
 								-# 	%input{ :type => 'text', :placeholder => 'Введите трек номер' }
 
-				%article.slider
-					%ul
-						%li
-							.title
-								%h1 Перевод наложенного
-								%h1
-									платежа на
-									%strong 3-ий день!
-							.caption
-								Обьединение отделений компании СДЭК предоставляет особые условия для Интернет-магазинов, поступления накапливаются с Понедельника по Пятницу и отправляются каждый Понедельник!
+				%article.with-slider
+					.slider
+						%ul
+							%li
+								.title
+									%h1 Перевод наложенного
+									%h1
+										платежа на 3-ий день!
+								.caption
+									Обьединение отделений компании СДЭК предоставляет особые условия для Интернет-магазинов, поступления накапливаются с Понедельника по Пятницу и отправляются каждый Понедельник!
 
-						%li Another slide
-						%li My last slide
+							%li Another slide
+							%li My last slide
 
 				%article.language
 					#google_translate_element
@@ -90,7 +90,7 @@
 					.figures-wrapper
 						%figure
 							%div
-								%img{ :src => 'images/ico-settings.png' }
+								%img{ :src => 'images/ico-globus.png' }
 							%figcaption
 								%strong 16 лет
 								%br
@@ -98,7 +98,7 @@
 
 						%figure
 							%div
-								%img{ :src => 'images/ico-globus.png' }
+								%img{ :src => 'images/ico-location.png' }
 							%figcaption
 								%strong 300 пунктов
 								%br
@@ -106,20 +106,21 @@
 
 						%figure
 							%div
-								%img{ :src => 'images/ico-location.png' }
+								%img{ :src => 'images/ico-home.png' }
 							%figcaption.fat
-								%strong 14 дней
+								%strong > 400
 								%br
 								бесплатного хранения посылок на нашем складе
 
 						%figure
 							%div
-								%img{ :src => 'images/ico-home.png' }
+								%img{ :src => 'images/ico-settings.png' }
 							%figcaption
 								%strong API
 								бесплатная интеграция вашего магазина
 
 			%section#second-page.info-page
+				%a{:name => "why-we"}
 				.content
 					%h1 Почему это выгодно для Вас
 
@@ -382,12 +383,14 @@
 								0 руб
 
 			%section#fifth-page
+				%a{:name => "recall"}
 				%h1 Остались вопросы?
 				%p Получите бесплатную консультацию
 				%button.js-show-contact-modal
 					Получить
 
 			%section.section-page-title
+				%a{:name => "office"}
 				%h1 Наши пункты выдачи
 				%p Более 306 пунктов выдачи по всей России
 
