@@ -12,12 +12,12 @@ let sendCalcRequest = () => {
   // Вычисляем тариф
   let $calcPlaceFrom = ($('#calc-place-from').val() === '1') ? true : false;
   let $calcPlaceTo = ($('#calc-place-to').val() === '1') ? true : false;
-  let tariff = 136;
+  let tariff = 10;
 
-  if (!$calcPlaceFrom && !$calcPlaceTo) tariff = 136; // c-c
-  if (!$calcPlaceFrom && $calcPlaceTo) tariff = 137;  // c-d
-  if ($calcPlaceFrom && !$calcPlaceTo) tariff = 138;  // d-c
-  if ($calcPlaceFrom && $calcPlaceTo) tariff = 139;   // d-d
+  if (!$calcPlaceFrom && !$calcPlaceTo) tariff = 10; // c-c
+  if (!$calcPlaceFrom && $calcPlaceTo) tariff = 11;  // c-d
+  if ($calcPlaceFrom && !$calcPlaceTo) tariff = 12;  // d-c
+  if ($calcPlaceFrom && $calcPlaceTo) tariff = 1;   // d-d
 
   $('input[name="tariffId"]').val(tariff);
 
@@ -53,7 +53,7 @@ let sendCalcRequest = () => {
         `);
 
         // Вставляем полученный ценник
-        $calcResultBlock.html(data.result.price);
+        $calcResultBlock.html(`${data.result.price} руб.`);
 
       } else {
         for(var key in data["error"]) {
@@ -85,11 +85,11 @@ let sendCalcStartRequest = () => {
   let $hiddenCityTo = $('#receiverCityId');
   let $hiddenCityFrom = $('#senderCityId');
 
-  $hiddenCityFrom.val(136);
+  $hiddenCityFrom.val(44);
   $hiddenCityTo.val(137);
 
   // Вычисляем тариф
-  let tariff = 136;
+  let tariff = 10;
 
   $('input[name="tariffId"]').val(tariff);
 
@@ -128,7 +128,7 @@ let sendCalcStartRequest = () => {
         `);
 
         // Вставляем полученный ценник
-        $calcResultBlock.html(data.result.price);
+        $calcResultBlock.html(`${data.result.price} руб.`);
 
       } else {
         for(var key in data["error"]) {

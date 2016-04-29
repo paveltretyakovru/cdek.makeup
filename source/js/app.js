@@ -7,6 +7,7 @@ import InitGeoApi from 'modules/InitGeoApi';
 import InitSliders from 'modules/InitSliders';
 import InitShowMore from 'modules/InitShowMore';
 import InitPopovers from 'modules/InitPopovers';
+import InitScrollNav from 'modules/InitScrollNav';
 import InitVkModules from 'modules/InitVkModules';
 import InitCalculator from 'modules/InitCalculator';
 import InitRangeSlider from 'modules/InitRangeSlider';
@@ -20,6 +21,7 @@ InitPopovers();
 InitGeoApi();
 InitCalculator();
 InitRangeSlider();
+InitScrollNav();
 
 $('.js-show-contact-modal').on('click', () => {
   $("#contact-modal").modal({

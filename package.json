@@ -56,6 +56,7 @@
     "jquery-ui-browserify": "^1.11.0-pre-seelio",
     "jquery.cookie": "^1.4.1",
     "json2ify": "0.0.4",
+    "page-scroll-to-id": "^1.5.4",
     "rivets": "^0.8.1",
     "rivets-backbone-adapter": "^2.2.0",
     "stringify": "^4.0.1",

@@ -7,12 +7,15 @@ let InitSliders = () => {
   });
 
   let $language = $('.language');
-  let $firstSlider = $('article.with-slider .unslider-nav');
-  $firstSlider.css('top', $language.position().top + 4);
-
-  $(window).resize(() => {
-    $firstSlider.css('top', $language.position().top + 4);
-  })
+  let $firstSliderNav = $('article.with-slider .unslider-nav');
+  // $firstSlider.css('top', $language.position().top + 4);
+  //
+  // $(window).resize(() => {
+  //   $firstSlider.css('top', $language.position().top + 4);
+  // })
+  //
+  $language.append($firstSliderNav);
+  $language.append($('#google_translate_element'));
 }
 
 export default InitSliders;

@@ -1,6 +1,8 @@
 section#second-page {
   display: flex;
   justify-content: center;
+  background: url('../images/bg-second-page.png') bottom left no-repeat;
+  background-size: 24%;
 
   h1 {
     text-align: center;

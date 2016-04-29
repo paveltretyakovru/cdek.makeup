@@ -15,10 +15,12 @@ import {sendCalcStartRequest, sendCalcRequest} from './calculator/sendCalcReques
  */
 let InitCalculator = () => {
   // Собираем селекторы для работы с autocomplete полями
+  // Чтобы не трогать html, небольшое логическое несоответсвие - #input-city-from
+  // это поле "город откуда", менеджеры не хотят компилить haml, пришлось так
   let $city = $('#city');
-  let $inputCityTo = $('#input-city-to');
+  let $inputCityTo = $('#input-city-from');
   let $hiddenCityTo = $('#receiverCityId');
-  let $inputCityFrom = $('#input-city-from');
+  let $inputCityFrom = $('#input-city-to');
   let $hiddenCityFrom = $('#senderCityId');
   let $cdekForm = $('#cdek-form');
   let $inputWeight = $('#calc-weight-input');

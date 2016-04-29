@@ -26,13 +26,13 @@
 						%nav
 							%ul
 								%li
-									%a{ :href=>'#main' } Главная
+									%a{ :href=>'#first-page' } Главная
 								%li
-									%a{ :href=>'#why-we' } Почему мы
+									%a{ :href=>'#second-page' } Почему мы
 								%li
 									%a{ :href=>'#office' } Отделения
 								%li
-									%a{ :href=>'#recall' } Отзывы
+									%a{ :href=>'#reviews' } Отзывы
 								%li
 									%a{ :class => 'js-show-vk-news' } Новости
 							%article
@@ -81,6 +81,7 @@
 							%li My last slide
 
 				%article.language
+					%span
 					#google_translate_element
 					-# %a.active{ :href=>'#' } Rus
 					-# %a{ :href=>'#' } Eng
@@ -100,9 +101,9 @@
 							%div
 								%img{ :src => 'images/ico-location.png' }
 							%figcaption
-								%strong 300 пунктов
+								%strong > 300
 								%br
-								выдачи - отправки посылок
+								пунктов выдачи - отправки посылок
 
 						%figure
 							%div
@@ -389,7 +390,7 @@
 				%button.js-show-contact-modal
 					Получить
 
-			%section.section-page-title
+			%section#office.section-page-title
 				%a{:name => "office"}
 				%h1 Наши пункты выдачи
 				%p Более 306 пунктов выдачи по всей России
@@ -401,7 +402,7 @@
 				-# %iframe{ :src => "https://ru.batchgeo.com/map/5d06b4c1024195f1d6197324bac66732", :width => "100%", :height => "480" }
 				-# %iframe{ :src => "https://mapalist.com/map/582448", :width => "100%", :height => "480", :xml => { :lang => "ru"} }
 
-			%section.section-page-title
+			%section#reviews.section-page-title
 				%h1 Отзывы
 				%p С нами работают крупные компании
 
@@ -580,7 +581,7 @@
 						/ режим доставки, склад-дверь
 						/ <input name="modeId" value="3" hidden />
 						/ Вес места, кг.
-						%input#calc-weight-input{:hidden => "", :name => "goods[0].weight", :value => "0.3"}
+						%input#calc-weight-input{:hidden => "", :name => "goods[0].weight", :value => "1"}
 						/ Длина места, см.
 						%input{:hidden => "", :name => "goods[0].length", :value => "10"}
 						/ Ширина места, см.
