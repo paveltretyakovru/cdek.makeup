@@ -4,8 +4,17 @@ import 'json2ify';
 import $ from 'jquery';
 import f2j from 'form2js';
 import getTodayDate from './getTodayDate';
+import md5 from 'MD5';
 
+const today = getTodayDate();
 
+// Аутентификация
+// Fight data
+const AUTH_LOGIN_FIGHT = '029bf8e79153db9131fe8a97ef9faa7b';
+const SECURE_FIGHT =  md5(`${today}&4417f0af7ec72c39abda3e21ecdd51bb`);
+// Test data
+const AUTH_LOGIN_TEST = '74142f86e28a0bf3e9b65847d9dbfc09';
+const SECURE_TEST = md5(`${today}&e0f3c16469e9203bb1c16e3522ac7e07`);
 
 let sendCalcRequest = () => {
   let $calcResultBlock = $('#calc-result-block');
@@ -33,15 +42,11 @@ let sendCalcRequest = () => {
   });
 
   // Аутентификация
-  // Fight data
-  // formData.authLogin = '74142f86e28a0bf3e9b65847d9dbfc09';
-  // formData.secure = 'e0f3c16469e9203bb1c16e3522ac7e07';
-  // Test data
-  formData.authLogin = '029bf8e79153db9131fe8a97ef9faa7b';
-  formData.secure = '4417f0af7ec72c39abda3e21ecdd51bb';
+  formData.authLogin = AUTH_LOGIN_FIGHT;
+  formData.secure =  SECURE_FIGHT;
 
   // Устанавилваем дату планируемой отправки
-  formData.dateExecute = getTodayDate();
+  formData.dateExecute = today;
 
   // console.log('TEST DATA', formData);
 
@@ -104,7 +109,7 @@ let sendCalcStartRequest = () => {
   $hiddenCityTo.val(137);
 
   // Вычисляем тариф
-  let tariff = 10;
+  let tariff = 136;
 
   $('input[name="tariffId"]').val(tariff);
 
@@ -117,6 +122,14 @@ let sendCalcStartRequest = () => {
       };
     }
   });
+
+  // Аутентификация
+  formData.authLogin = AUTH_LOGIN_TEST;
+  formData.secure =  SECURE_TEST;
+
+  // Устанавилваем дату планируемой отправки
+  formData.dateExecute = today;
+
   let formDataJson = JSON.stringify(formData);
   console.log('Отрпавляемые данные', JSON.stringify(formData));
 

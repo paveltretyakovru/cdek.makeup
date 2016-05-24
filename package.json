@@ -41,6 +41,7 @@
     "watchify": "^3.7.0"
   },
   "dependencies": {
+    "MD5": "^1.3.0",
     "backbone-routing": "^0.2.0",
     "backbone.marionette": "^2.4.4",
     "bootstrap": "^3.3.6",
@@ -74,7 +75,7 @@
     "tooltip": "./node_modules/bootstrap/js/tooltip.js",
     "popover": "./node_modules/bootstrap/js/popover.js",
     "geocomplete": "./node_modules/geocomplete/jquery.geocomplete.min.js",
-    "jquery-toast-plugin": "./node_modules/jquery-toast-plugin/dist/jquery.toast.min.js"
+    "jquery-toast-plugin": "./node_modules/jquery-toast-plugin/src/jquery.toast.js"
   },
   "browserify": {
     "transform": [
