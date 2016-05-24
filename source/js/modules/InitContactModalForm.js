@@ -2,6 +2,7 @@
 
 import $ from 'jquery';
 import 'jquery-modal';
+import 'jquery-toast-plugin';
 
 let InitContactModalForm = () => {
   let $contactModal = $('#contact-modal'),
@@ -11,7 +12,8 @@ let InitContactModalForm = () => {
 
   // Менеджеры без компиляции hamla изменили html. Поэтому приходится вот так
   // ¯ \ _ (ツ) _ / ¯
-  $phone.attr('type', 'tel');
+  $phone.attr('type', 'tel').attr('required', true);
+  $name.attr('required', true);
 
   // init jquery-modal
   $('.js-show-contact-modal').on('click', () => $contactModal.modal({}));
@@ -26,14 +28,49 @@ let InitContactModalForm = () => {
     };
 
     $.post('mail.php', data)
-      .done((data) => {
-        console.log('Успешный запрос. Результат:', data);
+      .done( (data) => {
+        data = JSON.parse(data);
+        let status = data.status;
+        let message = data.message || 'Запрос выполнен';
+
+        switch (status) {
+          case 'success':
+            console.log('Успешный запрос. Результат:', data);
+
+            $.toast({
+                text: message,
+                showHideTransition: 'slide',
+                icon: 'success',
+                hideAfter: 10000,
+            });
+
+            break;
+
+          case 'error':
+            $.toast({
+              text: message,
+              showHideTransition: 'fade',
+              icon: 'error',
+              hideAfter: 10000,
+            });
+            break;
+
+          default:
+            console.log('Default');
+        }
+
       })
       .fail((data) => {
-        console.error('Ошбибка во время запроса. Результат:', data);
+        console.error('', data);
+        $.toast({
+          text: `Ошбибка во время запроса. Результат: ${data}`,
+          showHideTransition: 'fade',
+          icon: 'error',
+          hideAfter: 10000,
+        });
       })
       .always((data) => {
-        // console.log('Ф');
+        $.modal.close();
       });
 
     console.log('Submit contact form', $name.val(), $phone.val());

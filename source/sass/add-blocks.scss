@@ -86,6 +86,11 @@
     padding: 0px 54px;
     font-weight: 300;
 
+    div:first-child {
+      margin-top: 18px;
+      color: #228343;
+    }
+
     form {
       display: flex;
       flex-direction: column;
