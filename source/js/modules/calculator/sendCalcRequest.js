@@ -3,6 +3,7 @@
 import 'json2ify';
 import $ from 'jquery';
 import f2j from 'form2js';
+import getTodayDate from './getTodayDate';
 
 
 
@@ -12,12 +13,12 @@ let sendCalcRequest = () => {
   // Вычисляем тариф
   let $calcPlaceFrom = ($('#calc-place-from').val() === '1') ? true : false;
   let $calcPlaceTo = ($('#calc-place-to').val() === '1') ? true : false;
-  let tariff = 10;
+  let tariff = 136;
 
-  if (!$calcPlaceFrom && !$calcPlaceTo) tariff = 10; // c-c
-  if (!$calcPlaceFrom && $calcPlaceTo) tariff = 11;  // c-d
-  if ($calcPlaceFrom && !$calcPlaceTo) tariff = 12;  // d-c
-  if ($calcPlaceFrom && $calcPlaceTo) tariff = 1;   // d-d
+  if (!$calcPlaceFrom && !$calcPlaceTo) tariff = 136; // c-c
+  if (!$calcPlaceFrom && $calcPlaceTo) tariff = 137;  // c-d
+  if ($calcPlaceFrom && !$calcPlaceTo) tariff = 138;  // d-c
+  if ($calcPlaceFrom && $calcPlaceTo) tariff = 139;   // d-d
 
   $('input[name="tariffId"]').val(tariff);
 
@@ -30,6 +31,20 @@ let sendCalcRequest = () => {
       };
     }
   });
+
+  // Аутентификация
+  // Fight data
+  // formData.authLogin = '74142f86e28a0bf3e9b65847d9dbfc09';
+  // formData.secure = 'e0f3c16469e9203bb1c16e3522ac7e07';
+  // Test data
+  formData.authLogin = '029bf8e79153db9131fe8a97ef9faa7b';
+  formData.secure = '4417f0af7ec72c39abda3e21ecdd51bb';
+
+  // Устанавилваем дату планируемой отправки
+  formData.dateExecute = getTodayDate();
+
+  // console.log('TEST DATA', formData);
+
   let formDataJson = JSON.stringify(formData);
   console.log('Отрпавляемые данные', JSON.stringify(formData));
 
