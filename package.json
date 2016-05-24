@@ -52,6 +52,7 @@
     "gulp-connect": "^2.3.1",
     "gulp-rename": "^1.2.2",
     "gulp-ruby-haml": "0.0.9",
+    "jquery-browserify": "^1.8.1",
     "jquery-modal": "^0.7.0",
     "jquery-ui-browserify": "^1.11.0-pre-seelio",
     "jquery.cookie": "^1.4.1",
@@ -62,7 +63,7 @@
     "stringify": "^4.0.1",
     "unslider": "git+https://github.com/idiot/unslider.git",
     "webui-popover": "^1.2.5",
-    "wow": "git+https://github.com/matthieua/WOW.git"
+    "wowjs": "git+https://github.com/matthieua/WOW.git"
   },
   "browser": {
     "jquery": "./node_modules/jquery/dist/jquery.js",
@@ -77,7 +78,8 @@
     ]
   },
   "browserify-shim": {
-    "WOW": "wow",
+    "WOW": "wowjs",
+    "wow": "wowjs",
     "popover": {
       "exports": "popover",
       "depends": [
