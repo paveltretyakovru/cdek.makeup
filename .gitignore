@@ -2,7 +2,7 @@
 
 public/*
 !public/images/
-
+!public/mail.php
 
 node_modules/
 .sass-cache/

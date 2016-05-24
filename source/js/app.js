@@ -1,7 +1,6 @@
 'use strict';
 import $ from 'jquery';
 import 'jquery.cookie';
-import 'jquery-modal';
 
 import InitGeoApi from 'modules/InitGeoApi';
 import InitSliders from 'modules/InitSliders';
@@ -12,6 +11,7 @@ import InitVkModules from 'modules/InitVkModules';
 import InitCalculator from 'modules/InitCalculator';
 import InitRangeSlider from 'modules/InitRangeSlider';
 import InitScrollFadeEffects from 'modules/InitScrollFadeEffects';
+import InitContactModalForm from 'modules/InitContactModalForm';
 
 window.$ = $;
 
@@ -22,13 +22,6 @@ InitGeoApi();
 InitCalculator();
 InitRangeSlider();
 InitScrollNav();
-
-$('.js-show-contact-modal').on('click', () => {
-  $("#contact-modal").modal({
-
-  });
-  // console.log('Show modal');
-});
 
 $(document).ready( () => {
 

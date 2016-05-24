@@ -15,7 +15,7 @@ var notifyHaml = {
 }
 
 gulp.task('layout:connect', function() {
-  $.connect.server({ root: 'layout', port: 4445, livereload: false });
+  $.connect.server({ root: 'layout', port: 4446, livereload: false });
 });
 
 gulp.task('layout:sass', function() {
