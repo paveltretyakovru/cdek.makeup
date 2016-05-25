@@ -95,71 +95,30 @@ header {
 
   // Правая часть головы с регистрацией и т.п
   aside:last-child {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding-top: 35px;
+    width: 200px;
     background: url(../images/first_page_bg1.jpg);
+    text-align: center;
 
-    // Блок с входом и регистрацией
-    article:first-child {
-      display: flex;
-      padding: 12px 12px 12px 18px;
-
-      .button {
-        min-width: 100px;
-        text-align: center;
-        margin-left: 8px;
-        a {
-          color: #fff;
-        }
-      }
+    p {
+      font-weight: 600;
+      font-size: 24px;
     }
 
-    // Блок с формой выбора города и трек-номера
-    article:last-child {
-      padding-bottom: 8px;
-      color: #fff;
+    span {
       font-size: 12px;
-
-      & > p {
-        display: flex;
-        font-style: italic;
-        margin-left: 24px;
-        // margin-bottom: 8px;
-      }
-
-      span {
-        font-size: 18px;
-      }
-
-      .line {
-        display: flex;
-
-        .line-icon {
-          width: 24px;
-        }
-
-        img {
-          margin-right: 8px;
-        }
-      }
-
-      // Строка с выбором города
-      .line:first-child {
-
-      }
-
-      // Строка трек-номера
-      .line:last-child {
-        margin-top: 20px;
-        // margin-bottom: -12px;
-
-        input {
-          width: 157px;
-          height: 20px;
-        }
-      }
     }
 
+
+  }
+
+  .social-icons {
+    display: flex;
+    margin-top: 32px;
+    justify-content: center;
+
+    & > * {
+      margin-left: 16px;
+    }
   }
 }

@@ -2,7 +2,7 @@
 import $ from 'jquery';
 import 'jquery.cookie';
 
-import InitGeoApi from 'modules/InitGeoApi';
+// import InitGeoApi from 'modules/InitGeoApi';
 import InitSliders from 'modules/InitSliders';
 import InitShowMore from 'modules/InitShowMore';
 import InitPopovers from 'modules/InitPopovers';
@@ -18,7 +18,7 @@ window.$ = $;
 InitScrollFadeEffects();
 InitSliders();
 InitPopovers();
-InitGeoApi();
+// InitGeoApi();
 InitCalculator();
 InitRangeSlider();
 InitScrollNav();
