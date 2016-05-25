@@ -18,9 +18,11 @@
   .sides {
     display: flex;
     justify-content: space-between;
+    width: 1200px;
+    margin: auto;
 
     & > aside {
-      padding: 16px 64px;
+      // padding: 16px 64px;
       width: 521px;
     }
 

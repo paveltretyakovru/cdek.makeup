@@ -27,6 +27,10 @@ footer {
   }
 
   aside:first-child {
+    & > p {
+      margin-top: 32px;
+    }
+
     fieldset {
       margin-top: 32px;
       width: 200px;
