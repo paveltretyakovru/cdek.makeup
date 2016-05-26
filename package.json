@@ -75,7 +75,7 @@
     "tooltip": "./node_modules/bootstrap/js/tooltip.js",
     "popover": "./node_modules/bootstrap/js/popover.js",
     "geocomplete": "./node_modules/geocomplete/jquery.geocomplete.min.js",
-    "jquery-toast-plugin": "./node_modules/jquery-toast-plugin/src/jquery.toast.js"
+    "toast": "./node_modules/jquery-toast-plugin/src/jquery.toast.js"
   },
   "browserify": {
     "transform": [
@@ -83,8 +83,8 @@
     ]
   },
   "browserify-shim": {
-    "jquery-toast-plugin": {
-      "exports": "jquery-toast-plugin",
+    "toast": {
+      "exports": "toast",
       "depends": [
         "jquery:$"
       ]

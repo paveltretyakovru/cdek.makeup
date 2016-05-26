@@ -2,7 +2,7 @@
 
 import $ from 'jquery';
 import 'jquery-modal';
-import 'jquery-toast-plugin';
+import 'toast';
 
 let InitContactModalForm = () => {
   let $contactModal = $('#contact-modal'),
